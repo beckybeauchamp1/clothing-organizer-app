@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  description: MyString
+  shirt_id: 
+  pant_id: 
+  tee_id: 
+  skirt_id: 
+  short_id: 
+  dress_id: 
+  tank_id: 
+
+two:
+  description: MyString
+  shirt_id: 
+  pant_id: 
+  tee_id: 
+  skirt_id: 
+  short_id: 
+  dress_id: 
+  tank_id: 

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: 
+  start_date: 2016-05-10
+  end_date: 2016-05-10
+  outfit_id: 
+
+two:
+  title: 
+  start_date: 2016-05-10
+  end_date: 2016-05-10
+  outfit_id: 
