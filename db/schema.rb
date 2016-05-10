@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160510143752) do
+ActiveRecord::Schema.define(version: 20160510150656) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,8 +22,37 @@ ActiveRecord::Schema.define(version: 20160510143752) do
     t.datetime "updated_at",  null: false
   end
 
+  create_table "brand_names", force: :cascade do |t|
+    t.integer  "designer_id"
+    t.integer  "shirt_id"
+    t.integer  "pant_id"
+    t.integer  "tee_id"
+    t.integer  "skirt_id"
+    t.integer  "short_id"
+    t.integer  "dress_id"
+    t.integer  "tank_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "brand_names", ["designer_id"], name: "index_brand_names_on_designer_id", using: :btree
+  add_index "brand_names", ["dress_id"], name: "index_brand_names_on_dress_id", using: :btree
+  add_index "brand_names", ["pant_id"], name: "index_brand_names_on_pant_id", using: :btree
+  add_index "brand_names", ["shirt_id"], name: "index_brand_names_on_shirt_id", using: :btree
+  add_index "brand_names", ["short_id"], name: "index_brand_names_on_short_id", using: :btree
+  add_index "brand_names", ["skirt_id"], name: "index_brand_names_on_skirt_id", using: :btree
+  add_index "brand_names", ["tank_id"], name: "index_brand_names_on_tank_id", using: :btree
+  add_index "brand_names", ["tee_id"], name: "index_brand_names_on_tee_id", using: :btree
+
   create_table "clothings", force: :cascade do |t|
     t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "designers", force: :cascade do |t|
+    t.string   "title"
+    t.string   "website_url"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -31,11 +60,11 @@ ActiveRecord::Schema.define(version: 20160510143752) do
   create_table "dresses", force: :cascade do |t|
     t.integer  "clothing_id"
     t.string   "title"
-    t.string   "brand"
     t.integer  "cost"
     t.string   "size"
     t.string   "description"
     t.string   "length"
+    t.string   "color"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -87,13 +116,13 @@ ActiveRecord::Schema.define(version: 20160510143752) do
   create_table "pants", force: :cascade do |t|
     t.integer  "clothing_id"
     t.string   "title"
-    t.string   "brand"
     t.integer  "cost"
     t.string   "size"
     t.string   "description"
     t.string   "length"
     t.boolean  "jean"
     t.string   "waist"
+    t.string   "color"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -114,11 +143,11 @@ ActiveRecord::Schema.define(version: 20160510143752) do
   create_table "shirts", force: :cascade do |t|
     t.integer  "clothing_id"
     t.string   "title"
-    t.string   "brand"
     t.integer  "cost"
     t.string   "size"
     t.string   "description"
     t.string   "length"
+    t.string   "color"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -128,13 +157,13 @@ ActiveRecord::Schema.define(version: 20160510143752) do
   create_table "shorts", force: :cascade do |t|
     t.integer  "clothing_id"
     t.string   "title"
-    t.string   "brand"
     t.integer  "cost"
     t.string   "size"
     t.string   "description"
     t.string   "length"
     t.boolean  "jean"
     t.string   "waist"
+    t.string   "color"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -144,11 +173,11 @@ ActiveRecord::Schema.define(version: 20160510143752) do
   create_table "skirts", force: :cascade do |t|
     t.integer  "clothing_id"
     t.string   "title"
-    t.string   "brand"
     t.integer  "cost"
     t.string   "size"
     t.string   "description"
     t.string   "length"
+    t.string   "color"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -184,11 +213,11 @@ ActiveRecord::Schema.define(version: 20160510143752) do
   create_table "tanks", force: :cascade do |t|
     t.integer  "clothing_id"
     t.string   "title"
-    t.string   "brand"
     t.integer  "cost"
     t.string   "size"
     t.string   "description"
     t.string   "length"
+    t.string   "color"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
@@ -198,17 +227,25 @@ ActiveRecord::Schema.define(version: 20160510143752) do
   create_table "tees", force: :cascade do |t|
     t.integer  "clothing_id"
     t.string   "title"
-    t.string   "brand"
     t.integer  "cost"
     t.string   "size"
     t.string   "description"
     t.string   "length"
+    t.string   "color"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
 
   add_index "tees", ["clothing_id"], name: "index_tees_on_clothing_id", using: :btree
 
+  add_foreign_key "brand_names", "designers"
+  add_foreign_key "brand_names", "dresses"
+  add_foreign_key "brand_names", "pants"
+  add_foreign_key "brand_names", "shirts"
+  add_foreign_key "brand_names", "shorts"
+  add_foreign_key "brand_names", "skirts"
+  add_foreign_key "brand_names", "tanks"
+  add_foreign_key "brand_names", "tees"
   add_foreign_key "dresses", "clothings"
   add_foreign_key "images", "dresses"
   add_foreign_key "images", "pants"
