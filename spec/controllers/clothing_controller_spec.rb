@@ -1,6 +1,5 @@
 require "rails_helper"
 
-
 RSpec.describe ClothingController, :type => :controller do
   describe "RESTful GET Request" do
     it "renders all clothing" do

@@ -19,6 +19,8 @@ Clothing.destroy_all
 
 sizes = ["XXS", "XS", "S", "M", "L", "XL", "XXL"]
 lengths = ["short", "mid", "long"]
+jeans = [true, false]
+waist = ["high", "mid", "low"]
 shirts = []
 shorts = []
 skirts = []
@@ -59,6 +61,8 @@ end
   title: Faker::Commerce.product_name,
   cost: Faker::Commerce.price,
   size: sizes.shuffle.pop,
+  jean: jeans.shuffle.pop,
+  waist: waist.shuffle.pop,
   description: Faker::Lorem.sentence,
   length: lengths.shuffle.pop,
   color: Faker::Color.color_name
@@ -98,6 +102,8 @@ end
   title: Faker::Commerce.product_name,
   cost: Faker::Commerce.price,
   size: sizes.shuffle.pop,
+  jean: jeans.shuffle.pop,
+  waist: waist.shuffle.pop,
   description: Faker::Lorem.sentence,
   length: lengths.shuffle.pop,
   color: Faker::Color.color_name

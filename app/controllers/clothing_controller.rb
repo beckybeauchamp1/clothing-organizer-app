@@ -1,6 +1,7 @@
 class ClothingController < ApplicationController
   def index
-    @clothing = Clothing.all
+    @random = Clothing.first
     render status: 200, json: @clothing.to_json
   end
+
 end
