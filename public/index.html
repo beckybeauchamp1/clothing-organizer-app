@@ -12,11 +12,28 @@
   <script src="./js/homeController.js"></script>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Martel+Sans' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lekton' rel='stylesheet' type='text/css'>
   <link href="css/styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-  <h1>My Closet</h1>
-  <main data-ui-view></main>
+  <nav role="navigation">
+    <div id="menuToggle">
+    <input type="checkbox" />
+    <span></span>
+    <span></span>
+    <span></span>
+
+    <ul id="menu">
+      <a href="#"><li>Home</li></a>
+      <a href="#"><li>Outfits</li></a>
+      <a href="#"><li>Weather</li></a>
+      <a href="#"><li>Clothing</li></a>
+    </ul>
+  </div>
+</nav>
+
+<main data-ui-view></main>
+
+<script src="./js/jquery.js"></script>
 </body>
 </html>
