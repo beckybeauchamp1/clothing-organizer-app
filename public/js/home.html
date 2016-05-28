@@ -1,5 +1,20 @@
 <div class="row">
   <div class="col-md-12">
-    <h1>Clothing Planner</h1>
+    <h1>Outfit Planner</h1>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-8">
+    <i class="wi wi-night-thunderstorm"></i>
+  </div>
+  <div class="col-md-2 weather-forecast">
+    <h2>Current Temp:</h2>
+    <h3>{{temperature}} F°</h3>
+    <h2>{{current_location}}</h2>
+  </div>
+  <div class="col-md-2 weather-forecast">
+    <h2>Forecast:</h2>
+    <h3>{{weather.toLowerCase()}}</h3>
+    <i class="{{icon}} show-weather-icon"></i>
   </div>
 </div>

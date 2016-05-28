@@ -59,7 +59,7 @@ h1{
   margin-bottom: 5px;
   position: relative;
 
-  background: #cdcdcd;
+  background: black;
   border-radius: 3px;
 
   z-index: 1;
@@ -151,4 +151,17 @@ a:hover {
   color: #BBD3F6;
   text-decoration: none;
   font-weight: bold;
+}
+.weather-forecast{
+  background-color: rgba(255,255,255,0.7);
+  min-height: 150px;
+}
+.weather-forecast h2{
+  font-size: 20px;
+}
+.weather-forecast:last-of-type{
+  background-color: #BBD3F6;
+}
+.show-weather-icon{
+  font-size: 30px;
 }
