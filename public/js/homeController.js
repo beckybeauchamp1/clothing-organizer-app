@@ -2,5 +2,6 @@
 angular
 .module("clothing-app")
 .controller("homeController", function($scope){
-  
+
+
 });

@@ -13,6 +13,9 @@
   <script src="./js/weather/weather.js"></script>
   <script src="./js/weather/weatherFactory.js"></script>
   <script src="./js/homeController.js"></script>
+  <script src="./js/outfits/outfit.js"></script>
+  <script src="./js/outfits/outfitController.js"></script>
+  <script src="./js/outfits/outfitFactory.js"></script>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Lekton' rel='stylesheet' type='text/css'>
@@ -29,7 +32,7 @@
 
     <ul id="menu">
       <a href="#"><li>Home</li></a>
-      <a href="#"><li>Outfits</li></a>
+      <a data-ng-click="test()" data-ui-sref="outfits"><li>Outfits</li></a>
       <a href="#"><li>Weather</li></a>
       <a href="#"><li>Clothing</li></a>
     </ul>

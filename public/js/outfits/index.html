@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col-md-12 outfits-col">
+    <h2>Total Outfits Created: {{outfits.length}}</h2>
+    <div data-ng-repeat="outfit in outfits | limitTo: 10">
+      <a href="#/outfits"=>{{outfit.description}}</a>
+    </div>
+  </div>
+</div>

@@ -7,4 +7,9 @@ class Outfit < ActiveRecord::Base
   belongs_to :dress
   belongs_to :tank
   has_many :seasons, dependent: :destroy
+
+  def grabClothingItems
+    @values = self.values
+    puts @values
+  end
 end

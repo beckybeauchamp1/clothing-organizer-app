@@ -153,15 +153,30 @@ a:hover {
   font-weight: bold;
 }
 .weather-forecast{
-  background-color: rgba(255,255,255,0.7);
-  min-height: 150px;
+  background-color: rgba(255,255,255,0.6);
+  min-height: 175px;
+  transition: background-color, 1.0s ease-in;
+}
+.weather-forecast:hover{
+  background-color: #BBD3F6;
+}
+.weather-info{
+  width: 45%;
+  display: inline-table;
+  min-height: 175px;
 }
 .weather-forecast h2{
-  font-size: 20px;
-}
-.weather-forecast:last-of-type{
-  background-color: #BBD3F6;
+  font-size: 25px;
+  font-weight: bolder;
 }
 .show-weather-icon{
   font-size: 30px;
+}
+#loc{
+  font-size: 27px;
+}
+.outfits-col{
+  background-color: rgba(255,255,255,0.9);
+  min-height: 600px;
+  font-size: 23px;
 }

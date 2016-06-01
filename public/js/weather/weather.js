@@ -3,23 +3,6 @@
   .module("clothing-app")
   .controller("MainController", function($scope, MainFactory){
 
-
-
-
-    function Braces(values){
-      var balancedStringValues = []
-      for(var i = 0; i < values.length - 1; i ++){
-        if(values[i] !== values[i+1]){
-          balancedStringValues.push("NO")
-        }
-        else{
-          balancedStringValues.push("YES")
-        }
-      }
-      return balancedStringValues;
-    }
-
-
     $scope.current_location;
     $scope.weather;
     $scope.temperature;
@@ -46,7 +29,6 @@
 
       return $scope.icon = "wi wi-" + day + "-" + weather + "";
     }
-
 
 
     $scope.grabLocation = function(){
@@ -77,20 +59,7 @@
 
     window.onload = $scope.grabLocation();
 
-    // $scope.makeweatherAPIrequest = function(startPos){
-    //   var url = "http://api.wunderground.com/api/d7a417fe5f6a1575/conditions/geolookup/q/" + startPos.coords.latitude + "," + startPos.coords.longitude + ".json"
-    //   var request = $.ajax({
-    //     url: url,
-    //     type: "GET",
-    //     dataType: "json"
-    //   }).then(function(res){
-    //     console.log(res)
-    //     return res
-    //   }).fail(function(res){
-    //     alert("failure from user post");
-    //   });
-    //   return request;
-    // };
+
 
   });
 })();
