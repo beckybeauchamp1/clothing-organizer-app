@@ -9,4 +9,5 @@ class OutfitsController < ApplicationController
     puts @outfit
     render status: 200, json: @outfit.to_json
   end
+  
 end

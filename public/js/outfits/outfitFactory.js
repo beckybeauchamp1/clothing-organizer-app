@@ -11,8 +11,17 @@
     {
       update: {
         method: "PUT"
-      }
+      },
+      getOne: {
+        method: "GET",
+        params: {
+          id: '@id'
+        },
+        url: "http://localhost:3000/outfits/:id",
+        isArray: false
+      },
 
     });
   }
+
 })();

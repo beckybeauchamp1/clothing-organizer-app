@@ -3,6 +3,7 @@
 (function(){
   angular
   .module("clothing-app", [
+    'ngSimpleUpload',
     "ngResource",
     "ui.router",
     "outfits"
@@ -32,6 +33,12 @@
       controller: "OutfitController",
       controllerAs: "OutfitVM"
     })
+    .state("outfitShow", {
+      url: "/outfits/:id",
+      templateUrl: "./js/outfits/show.html",
+      controller: "OutfitShowController",
+      controllerAs: "OutfitShowVM"
+    });
   }
 
 }());

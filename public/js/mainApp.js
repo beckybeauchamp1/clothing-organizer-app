@@ -8,6 +8,10 @@
     $scope.temperature;
     $scope.icon;
 
+    $scope.myCallback = function (valueFromDirective) {
+      console.log(valueFromDirective);
+    };
+
     $scope.checkForecast = function(weather){
       var time = new Date().getHours()
       var day = "";
@@ -26,7 +30,6 @@
       else{
         day = "night"
       }
-
       return $scope.icon = "wi wi-" + day + "-" + weather + "";
     }
 
@@ -41,10 +44,7 @@
         startPos = position;
         lat = startPos.coords.latitude;
         long = startPos.coords.longitude;
-        console.log(lat)
-        console.log(long)
         MainFactory.getLocation({lat: lat, long: long}).$promise.then(function(res){
-          console.log(res)
           $scope.temperature = res.current_observation.temp_f
           $scope.current_location = res.current_observation.display_location.full
           $scope.checkForecast(res.current_observation.weather);
@@ -58,8 +58,7 @@
     };
 
     window.onload = $scope.grabLocation();
-
-
-
   });
+
+
 })();
