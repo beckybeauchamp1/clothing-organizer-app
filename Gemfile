@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+gem "mini_magick"
+
+gem 'rack-cors', :require => 'rack/cors'
 # Fake seed data
 gem 'faker', '~> 1.6', '>= 1.6.1'
 # Upload to S3 instead of local public folder

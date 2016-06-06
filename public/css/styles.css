@@ -93,7 +93,6 @@ h1{
   -webkit-font-smoothing: antialiased;
   transform-origin: 0% 0%;
   transform: translate(-100%, 0);
-
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
@@ -146,7 +145,17 @@ a:hover {
   min-height: 600px;
   font-size: 23px;
 }
-.file-uploads{
-  width: 50%;
-  font-size: 30px;
+
+.file-uploads button, .file-uploads input{
+  margin: 0 auto;
+  background-color: #BBD3F6;
+}
+
+.file-uploads input{
+  margin-top: 10px;
+}
+
+.file-uploads button {
+  margin-top: 20px;
+  width: 10%;
 }

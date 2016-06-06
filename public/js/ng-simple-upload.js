@@ -42,12 +42,13 @@ angular.module('ngSimpleUpload', [])
         return $.ajax({
           type: 'POST',
           url: scope.webApiUrl,
-          data: fd,
+          data: JSON.stringify(fd),
           async: true,
           cache: false,
-          contentType: false,
+          contentType: 'application/json; charset=UTF-8',
           processData: false
         }).done(function (d) {
+          console.log(d)
           // callback function in the controller
           scope.callbackFn(d);
         }).fail(function (x) {

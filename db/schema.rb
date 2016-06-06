@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160510150656) do
+ActiveRecord::Schema.define(version: 20160603035648) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,27 +71,6 @@ ActiveRecord::Schema.define(version: 20160510150656) do
 
   add_index "dresses", ["clothing_id"], name: "index_dresses_on_clothing_id", using: :btree
 
-  create_table "images", force: :cascade do |t|
-    t.string   "description"
-    t.integer  "shirt_id"
-    t.integer  "pant_id"
-    t.integer  "tee_id"
-    t.integer  "skirt_id"
-    t.integer  "short_id"
-    t.integer  "dress_id"
-    t.integer  "tank_id"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  add_index "images", ["dress_id"], name: "index_images_on_dress_id", using: :btree
-  add_index "images", ["pant_id"], name: "index_images_on_pant_id", using: :btree
-  add_index "images", ["shirt_id"], name: "index_images_on_shirt_id", using: :btree
-  add_index "images", ["short_id"], name: "index_images_on_short_id", using: :btree
-  add_index "images", ["skirt_id"], name: "index_images_on_skirt_id", using: :btree
-  add_index "images", ["tank_id"], name: "index_images_on_tank_id", using: :btree
-  add_index "images", ["tee_id"], name: "index_images_on_tee_id", using: :btree
-
   create_table "outfits", force: :cascade do |t|
     t.string   "description"
     t.integer  "shirt_id"
@@ -128,6 +107,28 @@ ActiveRecord::Schema.define(version: 20160510150656) do
   end
 
   add_index "pants", ["clothing_id"], name: "index_pants_on_clothing_id", using: :btree
+
+  create_table "photos", force: :cascade do |t|
+    t.string   "description"
+    t.integer  "shirt_id"
+    t.integer  "pant_id"
+    t.integer  "tee_id"
+    t.integer  "skirt_id"
+    t.integer  "short_id"
+    t.integer  "dress_id"
+    t.integer  "tank_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "image"
+  end
+
+  add_index "photos", ["dress_id"], name: "index_photos_on_dress_id", using: :btree
+  add_index "photos", ["pant_id"], name: "index_photos_on_pant_id", using: :btree
+  add_index "photos", ["shirt_id"], name: "index_photos_on_shirt_id", using: :btree
+  add_index "photos", ["short_id"], name: "index_photos_on_short_id", using: :btree
+  add_index "photos", ["skirt_id"], name: "index_photos_on_skirt_id", using: :btree
+  add_index "photos", ["tank_id"], name: "index_photos_on_tank_id", using: :btree
+  add_index "photos", ["tee_id"], name: "index_photos_on_tee_id", using: :btree
 
   create_table "seasons", force: :cascade do |t|
     t.string   "title"
@@ -247,13 +248,6 @@ ActiveRecord::Schema.define(version: 20160510150656) do
   add_foreign_key "brand_names", "tanks"
   add_foreign_key "brand_names", "tees"
   add_foreign_key "dresses", "clothings"
-  add_foreign_key "images", "dresses"
-  add_foreign_key "images", "pants"
-  add_foreign_key "images", "shirts"
-  add_foreign_key "images", "shorts"
-  add_foreign_key "images", "skirts"
-  add_foreign_key "images", "tanks"
-  add_foreign_key "images", "tees"
   add_foreign_key "outfits", "dresses"
   add_foreign_key "outfits", "pants"
   add_foreign_key "outfits", "shirts"
@@ -262,6 +256,13 @@ ActiveRecord::Schema.define(version: 20160510150656) do
   add_foreign_key "outfits", "tanks"
   add_foreign_key "outfits", "tees"
   add_foreign_key "pants", "clothings"
+  add_foreign_key "photos", "dresses"
+  add_foreign_key "photos", "pants"
+  add_foreign_key "photos", "shirts"
+  add_foreign_key "photos", "shorts"
+  add_foreign_key "photos", "skirts"
+  add_foreign_key "photos", "tanks"
+  add_foreign_key "photos", "tees"
   add_foreign_key "seasons", "outfits"
   add_foreign_key "shirts", "clothings"
   add_foreign_key "shorts", "clothings"

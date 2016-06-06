@@ -1,4 +1,5 @@
-class Image < ActiveRecord::Base
+class Photo < ActiveRecord::Base
+  mount_uploader :image, ImageUploader
   belongs_to :shirt
   belongs_to :pant
   belongs_to :tee
