@@ -9,7 +9,8 @@ body {
   padding: 0;
   color: black;
   font-family: "Lekton";
-  background-image: url("closet_one.jpg");
+  background: rgba(0,0,0,0.1);
+  background-image: url("closet.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -22,8 +23,14 @@ button{
 }
 h1{
   text-align: center;
-  font-size: 4em;
+  /*font-family: "Julius Sans One";*/
+  font-size: 5.5em;
+  color: white;
   font-weight: 200;
+  text-shadow: 0px 5px 5px black;
+}
+h2{
+  text-align: center;
 }
 #menuToggle {
   display: block;
@@ -105,42 +112,42 @@ h1{
   transform: scale(1.0, 1.0);
   opacity: 1;
 }
-
 a {
   text-decoration: none;
   color: #232323;
-  transition:color, font-weight 0.2s ease-in;
+  /*transition: font-weight 0.1s ease-in;*/
   text-align: center;
 }
 a:hover {
-  color: #BBD3F6;
+  color: black;
   text-decoration: none;
   font-weight: bold;
 }
-.weather-forecast{
-  background-color: rgba(255,255,255,0.6);
+.weather-forecast {
+  background-color: rgba(255,255,255,0.4);
   min-height: 175px;
   transition: background-color, 1.0s ease-in;
+  filter: blur(20px);
 }
-.weather-forecast:hover{
+.weather-forecast:hover {
   background-color: #BBD3F6;
 }
-.weather-info{
+.weather-info {
   width: 45%;
   display: inline-table;
   min-height: 175px;
 }
-.weather-forecast h2{
+.weather-forecast h2 {
   font-size: 25px;
   font-weight: bolder;
 }
-.show-weather-icon{
+.show-weather-icon {
   font-size: 30px;
 }
-#loc{
+#loc {
   font-size: 27px;
 }
-.outfits-col{
+.outfits-col {
   background-color: rgba(255,255,255,0.9);
   min-height: 600px;
   font-size: 23px;
@@ -158,4 +165,11 @@ a:hover {
 .file-uploads button {
   margin-top: 20px;
   width: 10%;
+}
+
+.navbar-right li{
+  margin-left: 20px;
+  color: white;
+  background-color: rgba(0,0,0,0.8);
+  font-size: 40px;
 }

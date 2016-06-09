@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   root :to => "static#index"
-  
+
   resources :clothing
   resources :shirts
   resources :outfits

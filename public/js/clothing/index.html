@@ -1,0 +1,17 @@
+<nav>
+  <ul class="nav navbar-nav navbar-right">
+    <li>Dresses</li>
+    <li>Shirts</li>
+    <li>Pants</li>
+    <li>Shorts</li>
+  </ul>
+</nav>
+<div class="row">
+  <div class="col-md-6">
+    <div data-ng-repeat="c in clothes | limitTo: 20 " >
+      <h3>{{c.title}}</h3>
+    </div>
+  </div>
+  <div class="col-md-6">
+  </div>
+</div>
