@@ -5,18 +5,19 @@ class PhotosController < ApplicationController
     render status: 200, json: @photos.to_json
   end
 
+  def new
+    @photo = Photo.new
+  end
+
   def create
-    @photo = Photo.new(photo_params)
-    puts @photo
-    if @photo.save
-      render status: 200, json: @photo.to_json
-    end
+    @photo = Photo.create!(photo_params)
+    redirect_to "/"
   end
 
   private
 
   def photo_params
-    params.fetch(:photo, {}).permit(:image, :description, :shirt_id, :pant_id, :tee_id, :skirt_id, :short_id, :dress_id, :tank_id)
+    params.require(:photo).permit(:image, :description)
   end
 
 end

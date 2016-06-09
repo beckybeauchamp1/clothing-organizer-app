@@ -5,7 +5,6 @@ class CreateSeasons < ActiveRecord::Migration
       t.date :start_date
       t.date :end_date
       t.references :outfit, index: true, foreign_key: true
-
       t.timestamps null: false
     end
   end

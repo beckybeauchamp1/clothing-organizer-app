@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem "mini_magick"
-
+gem "carrierwave"
+# Uploading images
 gem 'rack-cors', :require => 'rack/cors'
 # Fake seed data
 gem 'faker', '~> 1.6', '>= 1.6.1'
@@ -9,8 +9,6 @@ gem 'faker', '~> 1.6', '>= 1.6.1'
 gem 'fog'
 # Hiding secret keys and tokens
 gem 'figaro'
-# Uploading images
-gem "carrierwave"
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.6'
 # Use postgresql as the database for Active Record

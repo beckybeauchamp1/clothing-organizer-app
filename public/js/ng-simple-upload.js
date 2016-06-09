@@ -25,7 +25,7 @@ angular.module('ngSimpleUpload', [])
         // original code, trigger upload on change
         element.on('change', function (evt) {
           var files = evt.__files_ || (evt.target && evt.target.files);
-
+          console.log(files)
           Upload(files);
 
           // removes file(s) from input
@@ -34,19 +34,20 @@ angular.module('ngSimpleUpload', [])
       }
 
       function Upload(files) {
+        console.log(files)
         var fd = new FormData();
         angular.forEach(files, function (v, k) {
-          fd.append('file', files[k]);
+          fd.append('photo', files[k]);
         });
 
         return $.ajax({
           type: 'POST',
           url: scope.webApiUrl,
-          data: JSON.stringify(fd),
+          data: fd,
           async: true,
           cache: false,
-          contentType: 'application/json; charset=UTF-8',
-          processData: false
+          contentType: false,
+          processData: false,
         }).done(function (d) {
           console.log(d)
           // callback function in the controller
