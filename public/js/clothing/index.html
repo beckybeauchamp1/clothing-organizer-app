@@ -1,17 +1,12 @@
-<nav>
-  <ul class="nav navbar-nav navbar-right">
-    <li>Dresses</li>
-    <li>Shirts</li>
-    <li>Pants</li>
-    <li>Shorts</li>
-  </ul>
-</nav>
+<clothing-nav></clothing-nav>
+<!-- <search-bar></search-bar> -->
 <div class="row">
+  <div class="col-md-6">
+  </div>
   <div class="col-md-6">
     <div data-ng-repeat="c in clothes | limitTo: 20 " >
       <h3>{{c.title}}</h3>
+      <a href="clothing/{{c.id}}/photos/new">Add Image</a>
     </div>
-  </div>
-  <div class="col-md-6">
   </div>
 </div>

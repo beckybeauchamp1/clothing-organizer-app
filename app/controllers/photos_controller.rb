@@ -6,12 +6,17 @@ class PhotosController < ApplicationController
   end
 
   def new
+    @clothing = Clothing.find(params[:clothing_id])
     @photo = Photo.new
   end
 
   def create
-    @photo = Photo.create!(photo_params)
-    redirect_to "/"
+    clothing_type = params[:photo][:clothing_type]
+    type = Object.const_get(clothing_type)
+    clothing_id = params[:photo][:clothing_id]
+    @clothing = type.find(clothing_id)
+    @photo = @clothing.photos.create!(photo_params)
+    redirect_to "/#/clothes/#{clothing_id}"
   end
 
   private
