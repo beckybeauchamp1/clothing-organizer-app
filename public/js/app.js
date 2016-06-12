@@ -6,7 +6,8 @@
     'ngSimpleUpload',
     "ngResource",
     "ui.router",
-    "outfits"
+    "outfits",
+    "clothing"
   ])
   .config([
     "$stateProvider",
@@ -26,6 +27,18 @@
       templateUrl: "./js/home.html",
       controller: "MainController",
       controllerAs: "MainVM"
+    })
+    .state("clothing", {
+      url: "/clothes",
+      templateUrl: "./js/clothing/index.html",
+      controller: "ClothingController",
+      controllerAs: "ClothingVM"
+    })
+    .state('dresses', {
+      url: "/dresses",
+      templateUrl: "./js/clothing/dresses.html",
+      controller: "ClothingController",
+      controllerAs: "ClothingVM"
     })
     .state("outfits", {
       url: '/outfits',

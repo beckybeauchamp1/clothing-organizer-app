@@ -1,14 +1,34 @@
 Rails.application.routes.draw do
 
-  resources :clothing
-  resources :shirts
+  root :to => "static#index"
+
+  resources :clothing do
+    resources :photos
+  end
   resources :outfits
-  resources :shorts
-  resources :pants
-  resources :skirts
-  resources :tees
-  resources :tanks
-  resources :dresses
+
+  resources :shirts do
+    resources :photos
+  end
+  resources :shorts do
+    resources :photos
+  end
+  resources :pants do
+    resources :photos
+  end
+  resources :skirts do
+    resources :photos
+  end
+  resources :tees do
+    resources :photos
+  end
+  resources :tanks do
+    resources :photos
+  end
+  resources :dresses do
+    resources :photos
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

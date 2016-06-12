@@ -17,7 +17,11 @@
         },
         url: "http://api.wunderground.com/api/d7a417fe5f6a1575/conditions/geolookup/q/:lat,:long.json"
       },
-
+      getPhotos: {
+        method: "GET",
+        url: "http://localhost:3000/photos/:id",
+        isArray: true
+      }
     });
   }
 })();

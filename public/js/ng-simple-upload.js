@@ -25,7 +25,7 @@ angular.module('ngSimpleUpload', [])
         // original code, trigger upload on change
         element.on('change', function (evt) {
           var files = evt.__files_ || (evt.target && evt.target.files);
-
+          console.log(files)
           Upload(files);
 
           // removes file(s) from input
@@ -34,9 +34,10 @@ angular.module('ngSimpleUpload', [])
       }
 
       function Upload(files) {
+        console.log(files)
         var fd = new FormData();
         angular.forEach(files, function (v, k) {
-          fd.append('file', files[k]);
+          fd.append('photo', files[k]);
         });
 
         return $.ajax({
@@ -46,8 +47,9 @@ angular.module('ngSimpleUpload', [])
           async: true,
           cache: false,
           contentType: false,
-          processData: false
+          processData: false,
         }).done(function (d) {
+          console.log(d)
           // callback function in the controller
           scope.callbackFn(d);
         }).fail(function (x) {

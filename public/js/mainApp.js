@@ -2,6 +2,11 @@
   angular
   .module("clothing-app")
   .controller("MainController", function($scope, MainFactory){
+    
+    $scope.photos = MainFactory.getPhotos().$promise.then(function(data){
+      console.log(data)
+      return $scope.photos = data;
+    })
 
     $scope.current_location;
     $scope.weather;
