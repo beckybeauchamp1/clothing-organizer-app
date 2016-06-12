@@ -14,7 +14,7 @@ clothing_bottoms = []
 
 sizes = ["XXS", "XS", "S", "M", "L", "XL", "XXL"]
 lengths = ["short", "mid", "long"]
-types = ["Shirt", "Dress", "Pant", "Short"]
+types = ["Shirt", "Dress", "Pant", "Short", "Skirt"]
 
 100.times do |clothing|
   clothing = Clothing.create!(
@@ -24,7 +24,8 @@ types = ["Shirt", "Dress", "Pant", "Short"]
   description: Faker::Lorem.sentence,
   length: lengths.shuffle.pop,
   color: Faker::Color.color_name,
-  type: types.shuffle.pop
+  type: types.shuffle.pop,
+  times_worn: (1..20).to_a.shuffle.pop
   )
   if clothing.type == "Shirt" || clothing.type == "Dress"
     clothing_tops << clothing

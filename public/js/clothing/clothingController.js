@@ -17,4 +17,14 @@ angular.module('clothing')
 
   $scope.changeBackground();
 
+  $scope.checkForImages = function(photos){
+    if(photos.length > 0){
+      return true
+    }
+    else{
+      return false;
+    }
+  }
+
+
 });

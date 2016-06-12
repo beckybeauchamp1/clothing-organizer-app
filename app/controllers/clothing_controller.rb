@@ -1,7 +1,7 @@
 class ClothingController < ApplicationController
   def index
     @clothing = Clothing.all
-    render status: 200, json: @clothing.to_json
+    render :json => @clothing.to_json(:include => [:photos])
   end
 
   def show

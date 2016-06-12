@@ -4,6 +4,7 @@ class Clothing < ActiveRecord::Base
   has_many :clothing_tops, through: :saved_tops
   has_many :saved_bottoms, class_name: "Outfit", foreign_key: "clothing_bottom_id"
   has_many :clothing_bottoms, through: :saved_bottoms
+  belongs_to :designers
 
   def as_json(options={})
     options = options.try(:clone) || {}
