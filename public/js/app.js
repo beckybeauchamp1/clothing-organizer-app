@@ -34,6 +34,12 @@
       controller: "ClothingController",
       controllerAs: "ClothingVM"
     })
+    .state("clothingShow", {
+      url: "/clothes/:id",
+      templateUrl: "./js/clothing/show.html",
+      controller: "ClothingController",
+      controllerAs: "ClothingVM"
+    })
     .state('dresses', {
       url: "/dresses",
       templateUrl: "./js/clothing/dresses.html",

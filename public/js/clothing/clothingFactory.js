@@ -14,6 +14,13 @@
       update: {
         method: "PUT"
       },
+      getOne: {
+        method: "GET",
+        params: {
+          id: '@id'
+        },
+        url: "http://localhost:3000/clothing/:id"
+      },
       grabDresses:{
         method: "GET",
         url: "http://localhost:3000/dresses/:id",

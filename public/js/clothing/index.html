@@ -2,10 +2,12 @@
 <!-- <search-bar></search-bar> -->
 <div class="row">
   <div class="col-md-6">
+    Type: {{clothingType}}
   </div>
   <div class="col-md-6">
-    <div data-ng-repeat="c in clothes | limitTo: 20 " >
-      <h3>{{c.title}}</h3>
+    <div data-ng-repeat="c in clothes | limitTo: 30 | filter:{type: clothingType} " >
+      {{c}}
+      <h3><a data-ui-sref="clothingShow({id: c.id})">{{c.title}}</a></h3>
       <a href="clothing/{{c.id}}/photos/new">Add Image</a>
     </div>
   </div>
