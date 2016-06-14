@@ -1,13 +1,14 @@
 'use strict';
 
 angular.module('clothing')
-.controller('ClothingController', function($scope, ClothingFactory, $stateParams){
+.controller('ClothingController', function($scope, ClothingFactory, DesignerFactory, $stateParams){
+
+  // Should this be here
+  $scope.designers = DesignerFactory.query();
 
   $scope.clothes = ClothingFactory.query();
-  console.log($scope.clothes)
 
   $scope.dresses = ClothingFactory.grabDresses();
-  console.log($scope.dresses)
 
   $scope.one = ClothingFactory.getOne({id: $stateParams.id})
 
