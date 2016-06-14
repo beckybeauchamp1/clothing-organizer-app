@@ -26,14 +26,13 @@ body {
   h1{
     text-align: center;
     display: inline;
-    font-family: "Sacramento";
-    font-size: 7vmax;
+    font-family: "Special Elite";
+    font-size: 3vmax;
     color: black;
-    font-weight: bolder;
-    /*text-shadow: 0px 5px 5px gray;*/
+    text-shadow: 0px 2px 2px white;
   }
-  .header-letter{
-
+  .first-header-letter{
+    font-family: "Handlee";
   }
   img{
     max-width: 20%;
@@ -115,7 +114,7 @@ body {
 
   #menu li {
     padding: 10px 0;
-    font-size: 38px;
+    font-size: 25px;
     margin-top: 20px;
   }
   #menuToggle input:checked ~ ul {
@@ -134,34 +133,30 @@ body {
     font-weight: bold;
   }
   .weather-forecast {
-    background-color: rgba(255,255,255,0.9);
-    min-height: 175px;
+    background-color: rgba(255,255,255,0.2);
+    min-height: 200px;
     transition: background-color, 1.0s ease-in;
     filter: blur(20px);
+    width: 20%;
     border-radius: 10%;
   }
   .weather-forecast:hover {
     background-color: white;
   }
-  .weather-info {
-    width: 25%;
-    display: inline-table;
-    min-height: 175px;
-  }
   .weather-forecast h2 {
-    font-size: 25px;
+    font-size: 18px;
     font-weight: bolder;
   }
   .show-weather-icon {
-    font-size: 30px;
+    font-size: 22px;
   }
   #loc {
-    font-size: 27px;
+    font-size: 20px;
   }
   .outfits-col {
     background-color: rgba(255,255,255,0.9);
     min-height: 600px;
-    font-size: 23px;
+    font-size: 18px;
     margin-top: 40px;
   }
 
@@ -178,22 +173,35 @@ body {
     margin-top: 20px;
     width: 10%;
   }
+  .top-nav{
+    width: 100%;
+    background-color: white;
+  }
+  .top-nav-list{
+    list-style-type: none;
+    margin-left: 30%;
+  }
+  .top-nav-list li{
+    display: inline;
+    font-size: 1.5em;
+    padding: 10px;
+    margin-right: 5%;
+  }
   .nav-tabs {
     padding-left: 25%;
     margin: 0 auto;
-    margin-top: 40px;
-    background-color: rgba(255,255,255,0.95);
-    box-shadow: 0 5px 5px rgba(128, 64, 0, 0.4);
+    margin-top: 20px;
+    background-color: rgba(217, 228, 288, 0.6);
     width: 100%;
   }
   .nav-item {
-    margin-left: 2px;
-    font-size: 2.5em;
-    padding-left: 1em;
-    padding-right: 1em;
+    font-size: 1.6em;
+    padding-left: 2em;
+    padding-right: 2em;
   }
   .nav-link{
     color: black;
+    font-weight: bolder;
   }
   /*.nav-tabs > li > a:hover{
   background-color: inherit;

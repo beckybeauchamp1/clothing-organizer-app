@@ -6,6 +6,9 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+designers = File.open("db/designers.rb", "r")
+
+Designer.destroy_all
 Clothing.destroy_all
 Outfit.destroy_all
 
@@ -52,3 +55,7 @@ end
   clothing_bottom_id: clothing_bottoms.shuffle.pop.id
   )
 end
+
+  designers.each do |person|
+    Designer.create!(name: person)
+  end

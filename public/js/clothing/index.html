@@ -3,7 +3,6 @@
 <div data-ng-repeat="c in clothes | limitTo: 30 | filter:{type: clothingType} | orderBy:'-times_worn'" class="row">
   <div class="col-md-5">
     <h3><a data-ui-sref="clothingShow({id: c.id})">{{c.title}}</a></h3>
-    <h3>Times Worn: {{c.times_worn}}</h3>
   </div>
   <div class="col-md-1">
     <h3>Cost ${{c.cost}}</h3>
