@@ -10,8 +10,8 @@ body {
   color: black;
   font-family: "Lekton";
   background: linear-gradient(
-    rgba(255, 255, 255, 0.3),
-    rgba(255, 255, 255, 0.6)
+    rgba(255, 255, 255, 0.6),
+    rgba(0, 0, 0, 0.3)
     ),
     url(plan2.jpg);
     background-size: cover;
@@ -26,17 +26,30 @@ body {
   h1{
     text-align: center;
     display: inline;
-    font-family: "Special Elite";
-    font-size: 3vmax;
-    color: black;
-    text-shadow: 0px 2px 2px white;
-  }
-  .first-header-letter{
     font-family: "Handlee";
+    font-size: 3.25vmax;
+    color: black;
+    text-shadow: 0px 5.5px 5.5px white;
   }
   img{
     max-width: 20%;
     max-height: 20%;
+  }
+  /*clothing images*/
+  .thumbnail {
+    margin: 0 auto;
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+  }
+  .thumbnail:hover {
+    -webkit-transform:scale(2.0); /* Safari and Chrome */
+    -moz-transform:scale(2.0); /* Firefox */
+    -ms-transform:scale(2.0); /* IE 9 */
+    -o-transform:scale(2.0); /* Opera */
+    transform:scale(2.0);
   }
   h2{
     text-align: center;
@@ -159,6 +172,10 @@ body {
     font-size: 18px;
     margin-top: 40px;
   }
+  /*index.html page for viewing all clothes*/
+  .all-clothes-index-div{
+    background-color: rgba(255,255,255,0.7);
+  }
 
   .file-uploads button, .file-uploads input{
     margin: 0 auto;
@@ -175,23 +192,27 @@ body {
   }
   .top-nav{
     width: 100%;
-    background-color: white;
+    min-height: 30px;
+    background-color: black;
   }
   .top-nav-list{
     list-style-type: none;
-    margin-left: 30%;
+    margin-left: 45%;
   }
   .top-nav-list li{
     display: inline;
-    font-size: 1.5em;
+    font-size: 1.6em;
     padding: 10px;
-    margin-right: 5%;
+    margin-right: 8%;
+  }
+  .top-nav-list li a{
+    color: white;
   }
   .nav-tabs {
-    padding-left: 25%;
+    padding-left: 5%;
     margin: 0 auto;
     margin-top: 20px;
-    background-color: rgba(217, 228, 288, 0.6);
+    background-color: rgba(141, 171, 191, 0.6);
     width: 100%;
   }
   .nav-item {
@@ -207,3 +228,36 @@ body {
   background-color: inherit;
   border: none;
   }*/
+
+  .dropdown-submenu{
+    font-size: 20px;
+  }
+  .dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+  }
+  .dropdown-submenu>a:after {
+    display: block;
+    content: " ";
+    float: right;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    border-width: 5px 0 5px 5px;
+    border-left-color: #ccc;
+    margin-top: 5px;
+    margin-right: -10px;
+  }
+  .dropdown-sub-list{
+    padding-left: 25%;
+    display: inline-table;
+    width: 40%;
+    font-size: 19px;
+  }
+  input[type="checkbox"]{
+    -ms-transform: scale(1.5); /* IE */
+    -moz-transform: scale(1.5); /* FF */
+    -webkit-transform: scale(1.5); /* Safari and Chrome */
+    -o-transform: scale(1.5); /* Opera */
+    padding: 10px;
+  }

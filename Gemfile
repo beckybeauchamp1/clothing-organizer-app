@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem "mini_magick"
+# using to rotate images
 gem "carrierwave"
 # Uploading images
 gem 'rack-cors', :require => 'rack/cors'

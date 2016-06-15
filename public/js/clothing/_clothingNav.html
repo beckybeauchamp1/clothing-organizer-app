@@ -14,4 +14,33 @@
   <li class="nav-item">
     <a data-ng-model="clothingType" data-ng-click="clothingType='Skirt'" class="nav-link">Skirts</a>
   </li>
-</ul>
+  <li class="nav-item dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown">Filter
+      <span class="caret"></span></button></a>
+      <ul class="dropdown-menu multi-level" role="menu" aria-labelledby="dropdownMenu">
+        <li class="dropdown-submenu">
+          <a tabindex="-1" href="#">Sizes</a>
+          <ul class="dropdown-menu">
+            <li tabindex="-1" class="dropdown-sub-list"><label class="checkbox"><input type="checkbox" value="">XS</label></li>
+            <li tabindex="-1" class="dropdown-sub-list"><label class="checkbox"><input type="checkbox" value="">S</label></li>
+            <li tabindex="-1" class="dropdown-sub-list"><label class="checkbox"><input type="checkbox" value="">M</label></li>
+            <li tabindex="-1" class="dropdown-sub-list"><label class="checkbox"><input type="checkbox" value="">L</label></li>
+            <li tabindex="-1" class="dropdown-sub-list"><label class="checkbox"><input type="checkbox" value="">XL</label></li>
+          </ul>
+        </li>
+        <li class="divider"></li>
+        <li class="dropdown-submenu">
+          <a tabindex="-1" href="#">Length</a>
+          <ul class="dropdown-menu">
+            <li tabindex="-1" class="dropdown-sub-list">Example2</li>
+            <li tabindex="-1" class="dropdown-sub-list">Example2</li>
+            <li tabindex="-1" class="dropdown-sub-list">Example2</li>
+            <li tabindex="-1" class="dropdown-sub-list">Example2</li>
+            <li tabindex="-1" class="dropdown-sub-list">Example2</li>
+          </ul>
+        </li>
+      </ul>
+
+
+    </li>
+  </ul>

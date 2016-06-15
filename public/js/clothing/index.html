@@ -1,17 +1,18 @@
 <clothing-nav></clothing-nav>
-<!-- <search-bar></search-bar> -->
-<div data-ng-repeat="c in clothes | limitTo: 30 | filter:{type: clothingType} | orderBy:'-times_worn'" class="row">
-  <div class="col-md-5">
-    <h3><a data-ui-sref="clothingShow({id: c.id})">{{c.title}}</a></h3>
-  </div>
-  <div class="col-md-1">
-    <h3>$ {{c.cost}}</h3>
-  </div>
-  <div class="col-md-6">
-    <p>{{c.description}}</p>
-    <div data-ng-repeat="img in c.photos">
-      <img data-ng-show="img.image" src="{{img.image.url}}">
+<div class="row all-clothes-index-div">
+  <div data-ng-repeat="c in clothes | limitTo: 30 | filter:{type: clothingType} | orderBy:'-times_worn'" class="row">
+    <div class="col-md-5">
+      <h3><a data-ui-sref="clothingShow({id: c.id})">{{c.title}}</a></h3>
     </div>
-    <a data-ng-hide="checkForImages(c.photos)" href="clothing/{{c.id}}/photos/new">Add Image</a>
+    <div class="col-md-1">
+      <h3>$ {{c.cost}}</h3>
+    </div>
+    <div class="col-md-6">
+      <p>{{c.description}}</p>
+      <div data-ng-repeat="img in c.photos">
+        <img data-ng-show="img.image" src="{{img.image.url}}">
+      </div>
+      <a data-ng-hide="checkForImages(c.photos)" href="clothing/{{c.id}}/photos/new">Add Image</a>
+    </div>
   </div>
 </div>

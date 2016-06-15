@@ -1,9 +1,12 @@
-<h2>{{one.title}}</h2>
-<h3>{{one.description}}</h3>
-<p>{{one.size}}</p>
-<p>{{one.length}}</p>
-<p>$ {{one.cost}}.00</p>
-<div data-ng-repeat="img in one.photos">
-  {{img}}
-  <img src="{{img.image.url}}">
+<div class="row">
+  <div class="col-md-12">
+    <h2>{{one.title}}</h2>
+    <h3>{{one.description}}</h3>
+    <p>{{one.size}}</p>
+    <p>{{one.length}}</p>
+    <p>$ {{one.cost}}.00</p>
+    <div data-ng-repeat="img in one.photos">
+      <img class="thumbnail" src="{{img.image.url}}">
+    </div>
+  </div>
 </div>
