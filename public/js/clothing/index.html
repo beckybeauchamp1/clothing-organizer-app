@@ -10,7 +10,9 @@
     <div class="col-md-6">
       <p>{{c.description}}</p>
       <div data-ng-repeat="img in c.photos">
-        <img data-ng-show="img.image" src="{{img.image.url}}">
+        <div class="img-preview">
+          <img data-ng-show="img.image" src="{{img.image.url}}">
+        </div>
       </div>
       <a data-ng-hide="checkForImages(c.photos)" href="clothing/{{c.id}}/photos/new">Add Image</a>
     </div>

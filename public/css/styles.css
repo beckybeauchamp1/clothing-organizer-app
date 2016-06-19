@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
 }
-html{
+html {
   margin: 0;
 }
 body {
@@ -13,17 +13,13 @@ body {
     rgba(255, 255, 255, 0.6),
     rgba(0, 0, 0, 0.3)
     ),
-    url(plan2.jpg);
+    url("../images/plan2.jpg");
     background-size: cover;
     background-attachment: fixed;
     height: 3000px;
     text-align: center;
   }
-  button{
-    width: 20%;
-    margin-left: 40%;
-  }
-  h1{
+  h1 {
     text-align: center;
     display: inline;
     font-family: "Handlee";
@@ -31,9 +27,33 @@ body {
     color: black;
     text-shadow: 0px 5.5px 5.5px white;
   }
-  img{
-    max-width: 20%;
+  h2 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bolder;
+  }
+  img {
+    max-width: 100%;
     max-height: 20%;
+  }
+  /*div container for images on clothes index.html page for images*/
+  .img-preview {
+    width: 20%;
+  }
+  button {
+    width: 20%;
+    margin-left: 40%;
+  }
+  a {
+    text-decoration: none;
+    color: #232323;
+    /*transition: font-weight 0.1s ease-in;*/
+    text-align: center;
+  }
+  a:hover {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
   }
   /*clothing images*/
   .thumbnail {
@@ -51,13 +71,43 @@ body {
     -o-transform:scale(2.0); /* Opera */
     transform:scale(2.0);
   }
-  h2{
-    text-align: center;
+
+  .top-nav{
+    width: 100%;
+    min-height: 30px;
+    background-color: black;
   }
+  /*top nav bar css*/
+  .top-nav-list{
+    list-style-type: none;
+    margin-left: 45%;
+  }
+  .top-nav-list li{
+    display: inline;
+    font-size: 1.6em;
+    padding: 10px;
+    margin-right: 8%;
+  }
+  .top-nav-list li a{
+    color: white;
+  }
+  @media(max-width: 800px){
+    .top-nav-list {
+      margin-left: .5%;
+      font-size: 0.9em;
+    }
+    .top-nav-list li {
+      padding: 2px;
+    }
+    .weather-forecast{
+      display: none;
+    }
+  }
+  /*side menu*/
   #menuToggle {
     display: block;
     position: relative;
-    top: 50px;
+    top: 63.5px;
     left: 50px;
     z-index: 1;
     -webkit-user-select: none;
@@ -124,7 +174,6 @@ body {
     transform: translate(-100%, 0);
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
   }
-
   #menu li {
     padding: 10px 0;
     font-size: 25px;
@@ -134,17 +183,6 @@ body {
     transform: scale(1.0, 1.0);
     opacity: 1;
   }
-  a {
-    text-decoration: none;
-    color: #232323;
-    /*transition: font-weight 0.1s ease-in;*/
-    text-align: center;
-  }
-  a:hover {
-    color: black;
-    text-decoration: none;
-    font-weight: bold;
-  }
   .weather-forecast {
     background-color: rgba(255,255,255,0.2);
     min-height: 200px;
@@ -153,12 +191,9 @@ body {
     width: 20%;
     border-radius: 10%;
   }
+  /*weather forecast and temp div css*/
   .weather-forecast:hover {
     background-color: white;
-  }
-  .weather-forecast h2 {
-    font-size: 18px;
-    font-weight: bolder;
   }
   .show-weather-icon {
     font-size: 22px;
@@ -166,6 +201,7 @@ body {
   #loc {
     font-size: 20px;
   }
+  /*main container for outfits index.html */
   .outfits-col {
     background-color: rgba(255,255,255,0.9);
     min-height: 600px;
@@ -176,38 +212,19 @@ body {
   .all-clothes-index-div{
     background-color: rgba(255,255,255,0.7);
   }
-
+  /*file uploads form*/
   .file-uploads button, .file-uploads input{
     margin: 0 auto;
     background-color: #BBD3F6;
   }
-
   .file-uploads input{
     margin-top: 10px;
   }
-
   .file-uploads button {
     margin-top: 20px;
     width: 10%;
   }
-  .top-nav{
-    width: 100%;
-    min-height: 30px;
-    background-color: black;
-  }
-  .top-nav-list{
-    list-style-type: none;
-    margin-left: 45%;
-  }
-  .top-nav-list li{
-    display: inline;
-    font-size: 1.6em;
-    padding: 10px;
-    margin-right: 8%;
-  }
-  .top-nav-list li a{
-    color: white;
-  }
+  /*second nav on clothing index.html*/
   .nav-tabs {
     padding-left: 5%;
     margin: 0 auto;
@@ -224,11 +241,6 @@ body {
     color: black;
     font-weight: bolder;
   }
-  /*.nav-tabs > li > a:hover{
-  background-color: inherit;
-  border: none;
-  }*/
-
   .dropdown-submenu{
     font-size: 20px;
   }
@@ -260,4 +272,7 @@ body {
     -webkit-transform: scale(1.5); /* Safari and Chrome */
     -o-transform: scale(1.5); /* Opera */
     padding: 10px;
+  }
+  .clothing-show-img{
+    width: 25%;
   }

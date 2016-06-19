@@ -1,12 +1,26 @@
 <div class="row">
+
   <div class="col-md-12">
+
     <h2>{{one.title}}</h2>
     <h3>{{one.description}}</h3>
     <p>{{one.size}}</p>
     <p>{{one.length}}</p>
     <p>$ {{one.cost}}.00</p>
+
     <div data-ng-repeat="img in one.photos">
-      <img class="thumbnail" src="{{img.image.url}}">
+      <figure class="clothing-show-img thumbnail imghvr-fade-down">
+        <img src="{{img.image.url}}">
+        <figcaption style="background-color:white">
+          <h3 class="ih-fade-down">Oscar Wilde</h3>
+          <p class="ih-zoom-in">
+            <i>"I have the simplest tastes, I am always satisfied with the best."</i>
+          </p>
+        </figcaption>
+      </figure>
     </div>
+
+
   </div>
+
 </div>
