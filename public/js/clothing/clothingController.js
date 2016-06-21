@@ -20,14 +20,14 @@ angular.module('clothing')
 
   $scope.checkForImages = function(photos){
     if(photos.length > 0){
-      console.log("true")
       return true
     }
     else{
-      console.log("false");
       return false;
     }
   }
+
+
 
 
 });

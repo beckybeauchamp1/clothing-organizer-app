@@ -36,12 +36,8 @@ body {
     max-width: 100%;
     max-height: 20%;
   }
-  /*div container for images on clothes index.html page for images*/
-  .img-preview {
-    width: 20%;
-  }
   button {
-    width: 20%;
+    width: 15%;
     margin-left: 40%;
   }
   a {
@@ -65,11 +61,11 @@ body {
     transition: all 1s ease;
   }
   .thumbnail:hover {
-    -webkit-transform:scale(2.0); /* Safari and Chrome */
-    -moz-transform:scale(2.0); /* Firefox */
-    -ms-transform:scale(2.0); /* IE 9 */
-    -o-transform:scale(2.0); /* Opera */
-    transform:scale(2.0);
+    -webkit-transform:scale(1.5); /* Safari and Chrome */
+    -moz-transform:scale(1.5); /* Firefox */
+    -ms-transform:scale(1.5); /* IE 9 */
+    -o-transform:scale(1.5); /* Opera */
+    transform:scale(1.5);
   }
 
   .top-nav{
@@ -237,42 +233,154 @@ body {
     padding-left: 2em;
     padding-right: 2em;
   }
-  .nav-link{
+  .nav-link {
     color: black;
     font-weight: bolder;
   }
-  .dropdown-submenu{
-    font-size: 20px;
+  .dropdown-div {
+    height: 300px;
+    width: 100%;
+    position: absolute;
+    z-index: 100;
   }
-  .dropdown-submenu:hover>.dropdown-menu {
-    display: block;
+  .nested-dropdown-ul{
+    list-style-type: none;
+    font-weight: bold;
+    display: none;
+    text-align: center;
   }
-  .dropdown-submenu>a:after {
-    display: block;
-    content: " ";
-    float: right;
+  .nested-dropdown {
+    margin-top: 10px;
+    padding-bottom: 10px;
+  }
+  .nested-dropdown a {
+    background-color: rgba(141, 171, 191, 0.9);
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    cursor: pointer;
+  }
+  .nested-dropdown a:hover{
+    color: lemonchiffon;
+    text-shadow: 1px 1px black;
+  }
+  .sub-nested-dropdown, .sub-nested-dropdown1 {
+    display: none;
+    margin-top: 30px;
+    list-style-type: none;
+  }
+  .sub-nested-dropdown li, .sub-nested-dropdown1 li{
+    width: 20%;
+    display: inline-table;
+    padding-right: 10px;
+  }
+  .caret {
+    border: 5px solid transparent;
+    display: inline-block;
     width: 0;
     height: 0;
-    border-color: transparent;
-    border-style: solid;
-    border-width: 5px 0 5px 5px;
-    border-left-color: #ccc;
-    margin-top: 5px;
-    margin-right: -10px;
+    opacity: 0.9;
+    /*vertical-align: top;*/
   }
-  .dropdown-sub-list{
-    padding-left: 25%;
-    display: inline-table;
-    width: 40%;
-    font-size: 19px;
+  .caret-right {
+    border-left: 5px solid;
+  }
+  .caret-down{
+    border-top: 5px solid;
   }
   input[type="checkbox"]{
     -ms-transform: scale(1.5); /* IE */
     -moz-transform: scale(1.5); /* FF */
     -webkit-transform: scale(1.5); /* Safari and Chrome */
     -o-transform: scale(1.5); /* Opera */
-    padding: 10px;
+    padding: 5px;
+  }
+  label{
+    margin-right: 4px;
   }
   .clothing-show-img{
-    width: 25%;
+    width: 35%;
+  }
+  /*div container for images on clothes index.html page for images*/
+  .hovereffect {
+    width: 40%;
+    min-height: 220px;
+    max-height: 220px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+    margin: 5px auto;
+    color: white;
+  }
+
+  .hovereffect .overlay {
+    position: absolute;
+    overflow: hidden;
+    width: 80%;
+    height: 95%;
+    left: 10%;
+    top: 5%;
+    /*border-bottom: 1px solid #FFF;
+    border-top: 1px solid #FFF;*/
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(0,1);
+    -ms-transform: scale(0,1);
+    transform: scale(0,1);
+  }
+
+  .hovereffect:hover .overlay {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  .hovereffect img {
+    display: block;
+    position: relative;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+
+  .hovereffect:hover img {
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
+    filter: brightness(0.6);
+    -webkit-filter: brightness(0.6);
+  }
+
+  .hovereffect h2 {
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    background-color: transparent;
+    color: #FFF;
+    padding: 0.5em 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,-100%,0);
+    transform: translate3d(0,-100%,0);
+  }
+
+  .hovereffect a, hovereffect p {
+    color: #FFF;
+    padding: 0.5em 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+  }
+
+  .hovereffect:hover a, .hovereffect:hover p, .hovereffect:hover h2 {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
   }
