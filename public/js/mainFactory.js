@@ -19,7 +19,7 @@
       },
       getPhotos: {
         method: "GET",
-        url: "http://localhost:3000/photos/:id",
+        url: "https://clothing-organizer-app.herokuapp.com/photos/:id",
         isArray: true
       }
     });
