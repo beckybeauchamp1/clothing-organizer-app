@@ -7,7 +7,7 @@
   ]);
 
   function OutfitFactoryFunction($resource){
-    return $resource("https://clothing-organizer-app.herokuapp.com/outfits/:id", {},
+    return $resource("http://localhost:3000/outfits/:id", {},
     {
       update: {
         method: "PUT"
@@ -17,7 +17,7 @@
         params: {
           id: '@id'
         },
-        url: "https://clothing-organizer-app.herokuapp.com/outfits/:id",
+        url: "http://localhost:3000/outfits/:id",
         isArray: false
       },
 
