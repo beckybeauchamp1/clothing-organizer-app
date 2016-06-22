@@ -103,7 +103,7 @@ sizes = ["XXS", "XS", "S", "M", "L", "XL", "XXL"]
 lengths = ["short", "mid", "long"]
 types = ["Shirt", "Dress", "Pant", "Short", "Skirt"]
 
-100.times do |clothing|
+150.times do |clothing|
   clothing = Clothing.create!(
   title: Faker::Commerce.product_name,
   cost: Faker::Commerce.price,
