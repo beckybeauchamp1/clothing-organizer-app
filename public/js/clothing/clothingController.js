@@ -27,7 +27,25 @@ angular.module('clothing')
     }
   }
 
+  $scope.sizeOptions = [];
 
+  $scope.addClothingSize = function(size){
+    var i = $.inArray(size, $scope.sizeOptions);
+    if (i > -1) {
+      $scope.sizeOptions.splice(i, 1);
+    }
+    else{
+      $scope.sizeOptions.push(size)
+    }
+  }
+
+  $scope.filterColors = function(clothing){
+    if($scope.sizeOptions.length > 0){
+      if($.inArray(clothing.size, $scope.sizeOptions)< 0)
+      return;
+    }
+    return clothing;
+  }
 
 
 });

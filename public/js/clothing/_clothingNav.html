@@ -19,20 +19,20 @@
     <div class="dropdown-div">
       <ul class="nested-dropdown-ul">
         <li class="nested-dropdown nav-link">
-          <a class="sub-dropdown-link" data-ng-click="nestedDropdown($event, 0)">Sizes <span class="caret caret-down"></span></a>
+          <a class="sub-dropdown-link" data-ng-mouseover="nestedDropdown($event, 0)">Sizes <span class="caret caret-down"></span></a>
           <ul class="sub-nested-dropdown">
-            <li class="sub-dropdown-list"><label class="checkbox"><input type="checkbox" value="">XS</label></li>
-            <li class="sub-dropdown-list"><label class="checkbox"><input type="checkbox" value="">S</label></li>
-            <li class="sub-dropdown-list"><label class="checkbox"><input type="checkbox" value="">M</label></li>
-            <li class="sub-dropdown-list"><label class="checkbox"><input type="checkbox" value="">L</label></li>
-            <li class="sub-dropdown-list"><label class="checkbox"><input type="checkbox" value="">XL</label></li>
+            <li class="sub-dropdown-list"><label class="checkbox"><input data-ng-click="addClothingSize('XS')" type="checkbox" value="">XS</label></li>
+            <li class="sub-dropdown-list"><label class="checkbox"><input data-ng-click="addClothingSize('S')" type="checkbox" value="">S</label></li>
+            <li class="sub-dropdown-list"><label class="checkbox"><input data-ng-click="addClothingSize('M')" type="checkbox" value="">M</label></li>
+            <li class="sub-dropdown-list"><label class="checkbox"><input data-ng-click="addClothingSize('L')" type="checkbox" value="">L</label></li>
+            <li class="sub-dropdown-list"><label class="checkbox"><input data-ng-click="addClothingSize('XL')" type="checkbox" value="">XL</label></li>
           </ul>
       </li>
       <li class="nested-dropdown nav-link">
-        <a class="sub-dropdown-link" data-ng-click="nestedDropdown($event, 1)">Length<span class="caret caret-down"></span></a>
+        <a class="sub-dropdown-link" data-ng-mouseover="nestedDropdown($event, 1)">Length<span class="caret caret-down"></span></a>
         <ul class="sub-nested-dropdown1">
           <li class="sub-dropdown-list"><label class="checkbox"><input type="checkbox" value="">Short</label></li>
-          <li class="sub-dropdown-list"><label class="checkbox"><input type="checkbox" value="">Average</label></li>
+          <li class="sub-dropdown-list"><label class="checkbox"><input type="checkbox" value="">Reg</label></li>
           <li class="sub-dropdown-list"><label class="checkbox"><input type="checkbox" value="">Long</label></li>
         </ul>
       </li>

@@ -1,9 +1,10 @@
 <clothing-nav></clothing-nav>
 <div class="row all-clothes-index-div">
-  <div data-ng-repeat="c in clothes | limitTo: 30 | filter:{type: clothingType} | orderBy:'-times_worn'" class="row">
+  <div data-ng-repeat="c in clothes | limitTo: 30 | filter:{type: clothingType} | filter:filterColors | orderBy:'-times_worn'" class="row">
     <div class="col-md-5">
       <h3><a data-ui-sref="clothingShow({id: c.id})">{{c.title}}</a></h3>
-      <p>{{c.description}}</p>
+      <p>Description: {{c.description}}</p>
+      <p>Size: {{c.size}}</p>
     </div>
     <div class="col-md-1">
       <h3>$ {{c.cost}}</h3>

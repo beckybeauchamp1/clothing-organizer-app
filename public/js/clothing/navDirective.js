@@ -10,11 +10,13 @@
         scope.startClickEvent = function(object){
           if($(".nested-dropdown-ul").css("display") === "inline" || $(".nested-dropdown-ul").css("display") === "block") {
             $(".dropdown-div").css("background-color", "rgba(0,0,0,0.0)");
+            $(".dropdown-div").css("box-shadow", "0px 0px 0px rgba(0,0,0,0.0)");
             $(".nested-dropdown-ul").css("display", "none");
             $(".sub-nested-dropdown").css("display", "none")
           }
           else {
-            $(".dropdown-div").css("background-color", "rgba(141, 171, 191, 0.9)");
+            $(".dropdown-div").css("background-color", "rgba(184, 209, 218, 1.0)");
+            $(".dropdown-div").css("box-shadow", "5px 5px 5px gray");
             $(".nested-dropdown-ul").css("display", "inline");
           }
         }

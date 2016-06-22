@@ -225,11 +225,12 @@ body {
     padding-left: 5%;
     margin: 0 auto;
     margin-top: 20px;
-    background-color: rgba(141, 171, 191, 0.6);
+    background-color: rgba(184, 209, 218, 1.0);
     width: 100%;
+    border: 2px solid white;
   }
   .nav-item {
-    font-size: 1.6em;
+    font-size: 1.4em;
     padding-left: 2em;
     padding-right: 2em;
   }
@@ -238,10 +239,11 @@ body {
     font-weight: bolder;
   }
   .dropdown-div {
-    height: 300px;
-    width: 100%;
+    min-height: 200px;
+    width: 80%;
     position: absolute;
     z-index: 100;
+    margin-top: -0.5px;
   }
   .nested-dropdown-ul{
     list-style-type: none;
@@ -254,15 +256,15 @@ body {
     padding-bottom: 10px;
   }
   .nested-dropdown a {
-    background-color: rgba(141, 171, 191, 0.9);
+    background-color: rgba(255,255,255,0.3);
     width: 90%;
     margin: 0 auto;
     padding: 10px;
     cursor: pointer;
+    border-radius: 2px;
   }
   .nested-dropdown a:hover{
-    color: lemonchiffon;
-    text-shadow: 1px 1px black;
+    box-shadow: 0 0 40px white;
   }
   .sub-nested-dropdown, .sub-nested-dropdown1 {
     display: none;
@@ -272,7 +274,10 @@ body {
   .sub-nested-dropdown li, .sub-nested-dropdown1 li{
     width: 20%;
     display: inline-table;
-    padding-right: 10px;
+    margin: 2px;
+  }
+  .sub-dropdown-list {
+    font-size: .8em;
   }
   .caret {
     border: 5px solid transparent;
@@ -289,14 +294,17 @@ body {
     border-top: 5px solid;
   }
   input[type="checkbox"]{
-    -ms-transform: scale(1.5); /* IE */
-    -moz-transform: scale(1.5); /* FF */
-    -webkit-transform: scale(1.5); /* Safari and Chrome */
-    -o-transform: scale(1.5); /* Opera */
-    padding: 5px;
+    -ms-transform: scale(1.4); /* IE */
+    -moz-transform: scale(1.4); /* FF */
+    -webkit-transform: scale(1.4); /* Safari and Chrome */
+    -o-transform: scale(1.4); /* Opera */
   }
-  label{
-    margin-right: 4px;
+  label {
+    margin-right: 6px;
+    margin-left: 6px;
+    margin-bottom: 3px;
+    font-size: 1em;
+
   }
   .clothing-show-img{
     width: 35%;
