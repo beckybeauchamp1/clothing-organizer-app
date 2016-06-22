@@ -7,8 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 Designer.destroy_all
-# Clothing.destroy_all
-# Outfit.destroy_all
+Clothing.destroy_all
+Outfit.destroy_all
 
 
 designers = ["6 SHORE ROAD",
@@ -96,48 +96,48 @@ designers = ["6 SHORE ROAD",
 "Velvet by Graham & Spencer",
 "Wildfox Couture"]
 
-# clothing_tops= []
-# clothing_bottoms = []
-#
-# sizes = ["XXS", "XS", "S", "M", "L", "XL", "XXL"]
-# lengths = ["short", "mid", "long"]
-# types = ["Shirt", "Dress", "Pant", "Short", "Skirt"]
-#
-# 100.times do |clothing|
-#   clothing = Clothing.create!(
-#   title: Faker::Commerce.product_name,
-#   cost: Faker::Commerce.price,
-#   size: sizes.shuffle.pop,
-#   description: Faker::Lorem.sentence,
-#   length: lengths.shuffle.pop,
-#   color: Faker::Color.color_name,
-#   type: types.shuffle.pop,
-#   times_worn: (1..20).to_a.shuffle.pop
-#   )
-#   if clothing.type == "Shirt" || clothing.type == "Dress"
-#     clothing_tops << clothing
-#   else
-#     clothing_bottoms << clothing
-#   end
-# end
-#
-# puts clothing_bottoms.shuffle.pop.id
-#
-# 30.times do |outfits|
-#   outfit = Outfit.create!(
-#   description: Faker::Lorem.sentence,
-#   clothing_top_id: clothing_tops.shuffle.pop.id,
-#   clothing_bottom_id: clothing_bottoms.shuffle.pop.id
-#   )
-# end
-#
-# 30.times do |outfits|
-#   outfit = Outfit.create!(
-#   description: Faker::Lorem.sentence,
-#   clothing_top_id: clothing_tops.shuffle.pop.id,
-#   clothing_bottom_id: clothing_bottoms.shuffle.pop.id
-#   )
-# end
+clothing_tops= []
+clothing_bottoms = []
+
+sizes = ["XXS", "XS", "S", "M", "L", "XL", "XXL"]
+lengths = ["short", "mid", "long"]
+types = ["Shirt", "Dress", "Pant", "Short", "Skirt"]
+
+100.times do |clothing|
+  clothing = Clothing.create!(
+  title: Faker::Commerce.product_name,
+  cost: Faker::Commerce.price,
+  size: sizes.shuffle.pop,
+  description: Faker::Lorem.sentence,
+  length: lengths.shuffle.pop,
+  color: Faker::Color.color_name,
+  type: types.shuffle.pop,
+  times_worn: (1..20).to_a.shuffle.pop
+  )
+  if clothing.type == "Shirt" || clothing.type == "Dress"
+    clothing_tops << clothing
+  else
+    clothing_bottoms << clothing
+  end
+end
+
+puts clothing_bottoms.shuffle.pop.id
+
+30.times do |outfits|
+  outfit = Outfit.create!(
+  description: Faker::Lorem.sentence,
+  clothing_top_id: clothing_tops.shuffle.pop.id,
+  clothing_bottom_id: clothing_bottoms.shuffle.pop.id
+  )
+end
+
+30.times do |outfits|
+  outfit = Outfit.create!(
+  description: Faker::Lorem.sentence,
+  clothing_top_id: clothing_tops.shuffle.pop.id,
+  clothing_bottom_id: clothing_bottoms.shuffle.pop.id
+  )
+end
 
 designers.each do |person|
   Designer.create!(name: person)
