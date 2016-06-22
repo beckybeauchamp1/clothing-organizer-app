@@ -16,7 +16,7 @@
  * {
    box-sizing: border-box;
  }
- html{
+ html {
    margin: 0;
  }
  body {
@@ -25,42 +25,100 @@
    color: black;
    font-family: "Lekton";
    background: linear-gradient(
-     rgba(255, 255, 255, 0.3),
-     rgba(255, 255, 255, 0.6)
+     rgba(255, 255, 255, 0.6),
+     rgba(0, 0, 0, 0.3)
      ),
-     url(assets2.jpg);
+     url("plan2.jpg");
      background-size: cover;
      background-attachment: fixed;
      height: 3000px;
      text-align: center;
    }
-   button{
-     width: 20%;
-     margin-left: 40%;
-   }
-   h1{
+   h1 {
      text-align: center;
      display: inline;
-     font-family: "Sacramento";
-     font-size: 7vmax;
+     font-family: "Handlee";
+     font-size: 3.25vmax;
      color: black;
+     text-shadow: 0px 5.5px 5.5px white;
+   }
+   h2 {
+     text-align: center;
+     font-size: 18px;
      font-weight: bolder;
-     /*text-shadow: 0px 5px 5px gray;*/
    }
-   .header-letter{
-
-   }
-   img{
-     max-width: 20%;
+   img {
+     max-width: 100%;
      max-height: 20%;
    }
-   h2{
+   button {
+     width: 15%;
+     margin-left: 40%;
+   }
+   a {
+     text-decoration: none;
+     color: #232323;
+     /*transition: font-weight 0.1s ease-in;*/
      text-align: center;
    }
+   a:hover {
+     color: black;
+     text-decoration: none;
+     font-weight: bold;
+   }
+   /*clothing images*/
+   .thumbnail {
+     margin: 0 auto;
+     -webkit-transition: all 1s ease; /* Safari and Chrome */
+     -moz-transition: all 1s ease; /* Firefox */
+     -ms-transition: all 1s ease; /* IE 9 */
+     -o-transition: all 1s ease; /* Opera */
+     transition: all 1s ease;
+   }
+   .thumbnail:hover {
+     -webkit-transform:scale(1.5); /* Safari and Chrome */
+     -moz-transform:scale(1.5); /* Firefox */
+     -ms-transform:scale(1.5); /* IE 9 */
+     -o-transform:scale(1.5); /* Opera */
+     transform:scale(1.5);
+   }
+
+   .top-nav{
+     width: 100%;
+     min-height: 30px;
+     background-color: black;
+   }
+   /*top nav bar css*/
+   .top-nav-list{
+     list-style-type: none;
+     margin-left: 45%;
+   }
+   .top-nav-list li{
+     display: inline;
+     font-size: 1.6em;
+     padding: 10px;
+     margin-right: 8%;
+   }
+   .top-nav-list li a{
+     color: white;
+   }
+   @media(max-width: 800px){
+     .top-nav-list {
+       margin-left: .5%;
+       font-size: 0.9em;
+     }
+     .top-nav-list li {
+       padding: 2px;
+     }
+     .weather-forecast{
+       display: none;
+     }
+   }
+   /*side menu*/
    #menuToggle {
      display: block;
      position: relative;
-     top: 50px;
+     top: 63.5px;
      left: 50px;
      z-index: 1;
      -webkit-user-select: none;
@@ -127,58 +185,45 @@
      transform: translate(-100%, 0);
      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
    }
-
    #menu li {
      padding: 10px 0;
-     font-size: 28px;
+     font-size: 25px;
      margin-top: 20px;
    }
    #menuToggle input:checked ~ ul {
      transform: scale(1.0, 1.0);
      opacity: 1;
    }
-   a {
-     text-decoration: none;
-     color: #232323;
-     /*transition: font-weight 0.1s ease-in;*/
-     text-align: center;
-   }
-   a:hover {
-     color: black;
-     text-decoration: none;
-     font-weight: bold;
-   }
    .weather-forecast {
-     background-color: rgba(255,255,255,0.9);
-     min-height: 175px;
+     background-color: rgba(255,255,255,0.2);
+     min-height: 200px;
      transition: background-color, 1.0s ease-in;
      filter: blur(20px);
+     width: 20%;
      border-radius: 10%;
    }
+   /*weather forecast and temp div css*/
    .weather-forecast:hover {
      background-color: white;
    }
-   .weather-info {
-     width: 25%;
-     display: inline-table;
-     min-height: 175px;
-   }
-   .weather-forecast h2 {
-     font-size: 23px;
-     font-weight: bolder;
-   }
    .show-weather-icon {
-     font-size: 28px;
+     font-size: 22px;
    }
    #loc {
-     font-size: 24px;
+     font-size: 20px;
    }
+   /*main container for outfits index.html */
    .outfits-col {
      background-color: rgba(255,255,255,0.9);
      min-height: 600px;
-     font-size: 20px;
+     font-size: 18px;
      margin-top: 40px;
    }
+   /*index.html page for viewing all clothes*/
+   .all-clothes-index-div{
+     background-color: rgba(255,255,255,0.7);
+   }
+   /*file uploads form*/
    .file-uploads{
      background-color: rgba(255,255,255,0.9);
      width: 50%;
@@ -199,37 +244,175 @@
      width: 20%;
      background-color: white;
    }
-   /*.nav-tabs {
-     padding-left: 15%;
-     background-color: rgba(255,255,255,0.7);
-   }
-   .nav-item {
-     margin-left: 2px;
-     font-size: 2.5em;
-     padding-left: 1em;
-     padding-right: 1em;
-   }
-   .nav-link{
-     color: black;
-   }*/
+   /*second nav on clothing index.html*/
    .nav-tabs {
-     padding-left: 25%;
+     padding-left: 5%;
      margin: 0 auto;
-     margin-top: 40px;
-     background-color: rgba(255,255,255,0.95);
-     box-shadow: 0 5px 5px rgba(128, 64, 0, 0.4);
+     margin-top: 20px;
+     background-color: rgba(184, 209, 218, 1.0);
      width: 100%;
+     border: 2px solid white;
    }
    .nav-item {
-     margin-left: 2px;
-     font-size: 2.5em;
-     padding-left: 1em;
-     padding-right: 1em;
+     font-size: 1.4em;
+     padding-left: 2em;
+     padding-right: 2em;
    }
-   .nav-link{
+   .nav-link {
      color: black;
+     font-weight: bolder;
    }
-   /*.nav-tabs > li > a:hover{
-   background-color: inherit;
-   border: none;
-   }*/
+   .dropdown-div {
+     min-height: 200px;
+     width: 80%;
+     position: absolute;
+     z-index: 100;
+     margin-top: -0.5px;
+   }
+   .nested-dropdown-ul{
+     list-style-type: none;
+     font-weight: bold;
+     display: none;
+     text-align: center;
+   }
+   .nested-dropdown {
+     margin-top: 10px;
+     padding-bottom: 10px;
+   }
+   .nested-dropdown a {
+     background-color: rgba(255,255,255,0.3);
+     width: 90%;
+     margin: 0 auto;
+     padding: 10px;
+     cursor: pointer;
+     border-radius: 2px;
+   }
+   .nested-dropdown a:hover{
+     box-shadow: 0 0 40px white;
+   }
+   .sub-nested-dropdown, .sub-nested-dropdown1 {
+     display: none;
+     margin-top: 30px;
+     list-style-type: none;
+   }
+   .sub-nested-dropdown li, .sub-nested-dropdown1 li{
+     width: 20%;
+     display: inline-table;
+     margin: 2px;
+   }
+   .sub-dropdown-list {
+     font-size: .8em;
+   }
+   .caret {
+     border: 5px solid transparent;
+     display: inline-block;
+     width: 0;
+     height: 0;
+     opacity: 0.9;
+     /*vertical-align: top;*/
+   }
+   .caret-right {
+     border-left: 5px solid;
+   }
+   .caret-down{
+     border-top: 5px solid;
+   }
+   input[type="checkbox"]{
+     -ms-transform: scale(1.4); /* IE */
+     -moz-transform: scale(1.4); /* FF */
+     -webkit-transform: scale(1.4); /* Safari and Chrome */
+     -o-transform: scale(1.4); /* Opera */
+   }
+   label {
+     margin-right: 6px;
+     margin-left: 6px;
+     margin-bottom: 3px;
+     font-size: 1em;
+
+   }
+   .clothing-show-img{
+     width: 35%;
+   }
+   /*div container for images on clothes index.html page for images*/
+   .hovereffect {
+     width: 40%;
+     min-height: 220px;
+     max-height: 220px;
+     overflow: hidden;
+     position: relative;
+     text-align: center;
+     cursor: default;
+     margin: 5px auto;
+     color: white;
+   }
+
+   .hovereffect .overlay {
+     position: absolute;
+     overflow: hidden;
+     width: 80%;
+     height: 95%;
+     left: 10%;
+     top: 5%;
+     /*border-bottom: 1px solid #FFF;
+     border-top: 1px solid #FFF;*/
+     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+     transition: opacity 0.35s, transform 0.35s;
+     -webkit-transform: scale(0,1);
+     -ms-transform: scale(0,1);
+     transform: scale(0,1);
+   }
+
+   .hovereffect:hover .overlay {
+     opacity: 1;
+     filter: alpha(opacity=100);
+     -webkit-transform: scale(1);
+     -ms-transform: scale(1);
+     transform: scale(1);
+   }
+
+   .hovereffect img {
+     display: block;
+     position: relative;
+     -webkit-transition: all 0.35s;
+     transition: all 0.35s;
+   }
+
+   .hovereffect:hover img {
+     filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
+     filter: brightness(0.6);
+     -webkit-filter: brightness(0.6);
+   }
+
+   .hovereffect h2 {
+     text-transform: uppercase;
+     text-align: center;
+     position: relative;
+     font-size: 17px;
+     background-color: transparent;
+     color: #FFF;
+     padding: 0.5em 0;
+     opacity: 0;
+     filter: alpha(opacity=0);
+     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+     transition: opacity 0.35s, transform 0.35s;
+     -webkit-transform: translate3d(0,-100%,0);
+     transform: translate3d(0,-100%,0);
+   }
+
+   .hovereffect a, hovereffect p {
+     color: #FFF;
+     padding: 0.5em 0;
+     opacity: 0;
+     filter: alpha(opacity=0);
+     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+     transition: opacity 0.35s, transform 0.35s;
+     -webkit-transform: translate3d(0,100%,0);
+     transform: translate3d(0,100%,0);
+   }
+
+   .hovereffect:hover a, .hovereffect:hover p, .hovereffect:hover h2 {
+     opacity: 1;
+     filter: alpha(opacity=100);
+     -webkit-transform: translate3d(0,0,0);
+     transform: translate3d(0,0,0);
+   }
