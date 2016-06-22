@@ -9,7 +9,7 @@
   ]);
 
   function ClothingFactoryFunction($resource){
-    return $resource("http://localhost:3000/clothing/:id", {},
+    return $resource("https://clothing-organizer-app.herokuapp.com/clothing/:id", {},
     {
       update: {
         method: "PUT"
@@ -19,11 +19,11 @@
         params: {
           id: '@id'
         },
-        url: "http://localhost:3000/clothing/:id"
+        url: "https://clothing-organizer-app.herokuapp.com/clothing/:id"
       },
       grabDresses:{
         method: "GET",
-        url: "http://localhost:3000/dresses/:id",
+        url: "https://clothing-organizer-app.herokuapp.com/dresses/:id",
         isArray: true
       }
     });

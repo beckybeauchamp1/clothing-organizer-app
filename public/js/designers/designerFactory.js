@@ -8,7 +8,7 @@
   ])
 
   function DesignerFactoryFunction($resource){
-    return $resource('http://localhost:3000/designers/:id', {},
+    return $resource('https://clothing-organizer-app.herokuapp.com/designers/:id', {},
     {
       update: {
         method: 'PUT'
