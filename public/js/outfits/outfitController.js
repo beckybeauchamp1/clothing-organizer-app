@@ -12,5 +12,16 @@ angular.module('outfits')
       console.log(valueFromDirective);
   };
 
+  $scope.changeBackground = function(){
+    $("body").css("background", "linear-gradient( rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 0.6)),url('./images/wood.jpg')");
+  }
+
+  $scope.changeBackground();
+
+  $scope.changeBackgroundHome = function(){
+    console.log("working")
+    $("body").css("background-image", "url('./images/plan2.jpg')");
+  };
+
 
 });

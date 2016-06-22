@@ -7,7 +7,8 @@
     "ngResource",
     "ui.router",
     "outfits",
-    "clothing"
+    "clothing",
+    "designers"
   ])
   .config([
     "$stateProvider",
@@ -33,6 +34,18 @@
       templateUrl: "./js/clothing/index.html",
       controller: "ClothingController",
       controllerAs: "ClothingVM"
+    })
+    .state("clothingShow", {
+      url: "/clothes/:id",
+      templateUrl: "./js/clothing/show.html",
+      controller: "ClothingController",
+      controllerAs: "ClothingVM"
+    })
+    .state('designersIndex', {
+      url: '/designers',
+      templateUrl: "./js/designers/index.html",
+      controller: "DesignerController",
+      controllerAs: "DesignerVM"
     })
     .state('dresses', {
       url: "/dresses",

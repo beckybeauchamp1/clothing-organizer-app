@@ -5,6 +5,9 @@ Rails.application.routes.draw do
   resources :clothing do
     resources :photos
   end
+
+  resources :designers
+
   resources :outfits
 
   resources :shirts do

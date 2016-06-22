@@ -1,12 +1,42 @@
-<nav>
-  <ul class="nav nav-tabs">
-    <li class="nav-item">
-      <a class="nav-link active">Dresses</a></li>
-    <li class="nav-item">
-      <a class="nav-link">Shirts</a></li>
-    <li class="nav-item">
-      <a class="nav-link">Pants</a></li>
-    <li class="nav-item">
-      <a class="nav-link">Shorts</a></li>
-  </ul>
-</nav>
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a data-ng-model="clothingType" data-ng-click="clothingType='Shirt'" class="nav-link">Shirts</a>
+  </li>
+  <li class="nav-item">
+    <a data-ng-model="clothingType" data-ng-click="clothingType='Dress'" class="nav-link">Dresses</a>
+  </li>
+  <li class="nav-item">
+    <a data-ng-model="clothingType" data-ng-click="clothingType='Pant'" class="nav-link">Pants</a>
+  </li>
+  <li class="nav-item">
+    <a data-ng-model="clothingType" data-ng-click="clothingType='Short'" class="nav-link">Shorts</a>
+  </li>
+  <li class="nav-item">
+    <a data-ng-model="clothingType" data-ng-click="clothingType='Skirt'" class="nav-link">Skirts</a>
+  </li>
+  <li class="nav-item">
+    <a data-ng-mouseover="startClickEvent($event)" class="dropdown nav-link">Filter <span class="caret caret-down"></span></a>
+    <div class="dropdown-div">
+      <ul class="nested-dropdown-ul">
+        <li class="nested-dropdown nav-link">
+          <a class="sub-dropdown-link" data-ng-mouseover="nestedDropdown($event, 0)">Sizes <span class="caret caret-down"></span></a>
+          <ul class="sub-nested-dropdown">
+            <li class="sub-dropdown-list"><label class="checkbox"><input data-ng-click="addClothingSize('XS')" type="checkbox" value="">XS</label></li>
+            <li class="sub-dropdown-list"><label class="checkbox"><input data-ng-click="addClothingSize('S')" type="checkbox" value="">S</label></li>
+            <li class="sub-dropdown-list"><label class="checkbox"><input data-ng-click="addClothingSize('M')" type="checkbox" value="">M</label></li>
+            <li class="sub-dropdown-list"><label class="checkbox"><input data-ng-click="addClothingSize('L')" type="checkbox" value="">L</label></li>
+            <li class="sub-dropdown-list"><label class="checkbox"><input data-ng-click="addClothingSize('XL')" type="checkbox" value="">XL</label></li>
+          </ul>
+      </li>
+      <li class="nested-dropdown nav-link">
+        <a class="sub-dropdown-link" data-ng-mouseover="nestedDropdown($event, 1)">Length<span class="caret caret-down"></span></a>
+        <ul class="sub-nested-dropdown1">
+          <li class="sub-dropdown-list"><label class="checkbox"><input type="checkbox" value="">Short</label></li>
+          <li class="sub-dropdown-list"><label class="checkbox"><input type="checkbox" value="">Reg</label></li>
+          <li class="sub-dropdown-list"><label class="checkbox"><input type="checkbox" value="">Long</label></li>
+        </ul>
+      </li>
+      </ul>
+    </div>
+  </li>
+</ul>
