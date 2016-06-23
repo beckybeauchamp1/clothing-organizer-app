@@ -117,4 +117,16 @@
       margin-bottom: 3px;
       font-size: 1em;
     }
+    .clothing-show-img{
+      width: 82%;
+      margin-top: 30px;
+    }
+    .thumbnail:hover {
+      -webkit-transform:scale(1.2); /* Safari and Chrome */
+      -moz-transform:scale(1.2); /* Firefox */
+      -ms-transform:scale(1.2); /* IE 9 */
+      -o-transform:scale(1.2); /* Opera */
+      transform:scale(1.2);
+    }
+
   }
