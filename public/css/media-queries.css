@@ -11,12 +11,20 @@
     }
   }
 
-  @media screen and (max-width: 579px){
-    h1 {
-      margin-left: 10px;
-      font-size: 3.0em;
-      margin-bottom: 20px;
+  @media screen and (max-width: 1000px){
+    .weather-forecast{
+      margin: 0 auto;
+      margin-top: 50px;
+      width: 100%;
+      background-color: rgba(255,255,255,0.5);
+      box-shadow: 0 0 20px rgb(181, 194, 219);
     }
+    .weather-forecast:hover{
+      box-shadow: 10px 10px 200px rgb(181, 194, 219);
+    }
+  }
+
+  @media screen and (max-width: 579px){
     .top-nav{
       margin-left: 0px;
       margin-right: 0px;
@@ -122,11 +130,11 @@
       margin-top: 30px;
     }
     .thumbnail:hover {
-      -webkit-transform:scale(1.2); /* Safari and Chrome */
-      -moz-transform:scale(1.2); /* Firefox */
-      -ms-transform:scale(1.2); /* IE 9 */
-      -o-transform:scale(1.2); /* Opera */
-      transform:scale(1.2);
+      -webkit-transform:scale(1.2 ); /* Safari and Chrome */
+      -moz-transform:scale(1.2 ); /* Firefox */
+      -ms-transform:scale(1.2 ); /* IE 9 */
+      -o-transform:scale(1.2 ); /* Opera */
+      transform:scale(1.2 );
     }
 
   }

@@ -1,15 +1,16 @@
 * {
   box-sizing: border-box;
 }
-html {
-  margin: 0;
+html, body{
+  margin: 0px;
   width: 100%;
-}
-body {
-  margin-top: 0;
-  padding: 0;
+  height: 100%;
+  padding: 0px;
+  overflow-x: hidden;
   color: black;
   font-family: "Lekton";
+}
+body {
   background: linear-gradient(
     rgba(255, 255, 255, 0.6),
     rgba(0, 0, 0, 0.3)
@@ -17,17 +18,16 @@ body {
     url("../images/plan2.jpg");
     background-size: cover;
     background-attachment: fixed;
-    height: 3000px;
+    min-height: 2000px;
     text-align: center;
-    width: 100%;
   }
   h1 {
     text-align: center;
     font-family: "Handlee";
-    font-size: 3.18vmax;
+    font-size: 3.0em;
     color: black;
     text-shadow: 0px 5.5px 5.5px white;
-    margin-top: 30px;
+    margin-top: 60px;
   }
   h2 {
     text-align: center;
@@ -45,7 +45,6 @@ body {
   a {
     text-decoration: none;
     color: #232323;
-    /*transition: font-weight 0.1s ease-in;*/
     text-align: center;
   }
   a:hover {
@@ -71,20 +70,20 @@ body {
   }
   .top-nav{
     width: 100%;
-    min-height: 30px;
+    min-height: 33px;
     background-color: black;
     margin-bottom: 10px;
   }
   /*top nav bar css*/
   .top-nav-list{
     list-style-type: none;
-    margin-left: 45%;
+    margin-right: 2%;
   }
   .top-nav-list li{
     display: inline;
-    font-size: 1.6em;
-    padding: 10px;
-    margin-right: 8%;
+    font-size: 1.4em;
+    padding: 8px;
+    margin-right: 25px;
   }
   .top-nav-list li a{
     color: white;
@@ -93,8 +92,8 @@ body {
   #menuToggle {
     display: block;
     position: relative;
-    top: 63.5px;
-    left: 50px;
+    top: 48.5px;
+    left: 60px;
     z-index: 1;
     -webkit-user-select: none;
     user-select: none;
@@ -115,8 +114,8 @@ body {
 
   #menuToggle span {
     display: block;
-    width: 33px;
-    height: 4px;
+    width: 35px;
+    height: 5px;
     margin-bottom: 5px;
     position: relative;
     background: black;
@@ -163,7 +162,7 @@ body {
   #menu li {
     padding: 10px 0;
     font-size: 25px;
-    margin-top: 20px;
+    margin-top: 15px;
   }
   #menuToggle input:checked ~ ul {
     transform: scale(1.0, 1.0);
