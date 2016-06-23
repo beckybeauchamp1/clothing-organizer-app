@@ -79,20 +79,42 @@
       padding-right: 4px;
       text-align: center;
     }
+    .dropdown-div {
+      min-height: 200px;
+      width: 80%;
+      position: absolute;
+      z-index: 100;
+      margin-top: -0.5px;
+    }
+    .nested-dropdown-ul{
+      list-style-type: none;
+      font-weight: bold;
+      display: none;
+      text-align: center;
+    }
+    .sub-nested-dropdown, .sub-nested-dropdown1 {
+      display: none;
+      margin-top: 15px;
+      list-style-type: none;
+    }
     .sub-nested-dropdown li, .sub-nested-dropdown1 li{
+      width: 20%;
       display: block;
       margin: 2px;
     }
+    .sub-dropdown-list {
+      font-size: 1.0em;
+    }
     input[type="checkbox"]{
-      -ms-transform: scale(2.5); /* IE */
-      -moz-transform: scale(2.5); /* FF */
-      -webkit-transform: scale(2.5); /* Safari and Chrome */
-      -o-transform: scale(2.5); /* Opera */
+      -ms-transform: scale(2.05); /* IE */
+      -moz-transform: scale(2.05); /* FF */
+      -webkit-transform: scale(2.05); /* Safari and Chrome */
+      -o-transform: scale(2.05); /* Opera */
     }
-    label.checkbox{
-      margin-left: 4px;
-    }
-    .clothing-show-img img{
-      width: 80%;
+    label {
+      margin-right: 6px;
+      margin-left: 6px;
+      margin-bottom: 3px;
+      font-size: 1em;
     }
   }
