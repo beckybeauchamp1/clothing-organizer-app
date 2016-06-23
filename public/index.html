@@ -34,6 +34,8 @@
   <link rel="stylesheet" href="css/imagehover.min.css">
   <link rel="stylesheet" type="text/css" href="css/weather-icons.min.css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link href="css/media-queries.css" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width" />
 </head>
 <body>
   <nav class="top-nav">
@@ -44,6 +46,9 @@
       <li><a href="https://github.com/beckybeauchamp1">Contact</a></li>
     </ul>
   </nav>
+
+  <h1><span class="first-header-letter">C</span>LOTHING <span class="first-header-letter">O</span>RGANIZER</h1>
+
   <nav role="navigation">
     <div id="menuToggle">
       <input type="checkbox" />
@@ -57,12 +62,25 @@
         <li><a data-ui-sref="clothing">Clothes</a></li>
         <li><a data-ui-sref="clothing">Budget</a></li>
         <li><a class="main-menu" data-ui-sref="designersIndex">Designers</ax></li>
-        <li><a class="main-menu" href="#">Upload New</a></li>
-      </ul>
-    </div>
-  </nav>
-  <h1><span class="first-header-letter">C</span>LOTHING <span class="first-header-letter">O</span>RGANIZER</h1>
-  <main data-ui-view></main>
+          <li><a class="main-menu" href="#">Upload New</a></li>
+        </ul>
+      </div>
 
-</body>
-</html>
+    </nav>
+
+
+    <!-- <div class="hide-menu">
+      <ul>
+        <li><button class="btn btn-default" href="/">Home</button></li>
+        <li><button class="btn btn-default" data-ui-sref="outfits">Outfits</button></li>
+        <li><button class="btn btn-default" data-ui-sref="clothing">Clothes</button></li>
+        <li><button class="btn btn-default" data-ui-sref="clothing">Budget</button></li>
+        <li><button class="btn btn-default" data-ui-sref="designersIndex">Designers</button></li>
+        <li><button class="btn btn-default" href="#">Upload New</button></li>
+      </ul>
+    </div> -->
+
+      <main data-ui-view></main>
+
+    </body>
+    </html>
