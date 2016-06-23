@@ -25,21 +25,21 @@
   }
 
   @media screen and (max-width: 579px){
+
     .top-nav{
       margin-left: 0px;
       margin-right: 0px;
       width: 100%;
-      padding-right: 20px;
+      overflow: visible;
     }
     .top-nav-list{
       list-style-type: none;
-      margin-left: 0px;
+      margin: 0 auto;
+      margin-right: 20px;
     }
     .top-nav-list li {
-      display: inline;
-      font-size: 1.4em;
-      margin: 0;
-      padding: 4px;
+      margin-right: 1px;
+      padding-right: 1px;
     }
     .weather-forecast{
       margin-top: 60px;
@@ -75,16 +75,13 @@
       text-decoration: none;
     }
     .nav-tabs {
-      padding-left: 1%;
       margin: 0px auto;
       margin-top: 50px;
       background-color: rgba(184, 209, 218, 1.0);
-      width: 120%;
     }
     .nav-item {
-      font-size: 1.8em;
-      padding-left: 6px;
-      padding-right: 4px;
+      padding: 2px;
+      font-size: 1.6em;
       text-align: center;
     }
     .dropdown-div {

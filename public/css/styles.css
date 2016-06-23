@@ -77,12 +77,12 @@ body {
   /*top nav bar css*/
   .top-nav-list{
     list-style-type: none;
-    margin-right: 2%;
+    margin-right: 15%;
   }
   .top-nav-list li{
     display: inline;
     font-size: 1.4em;
-    padding: 8px;
+    padding: 10px;
     margin-right: 25px;
   }
   .top-nav-list li a{
@@ -220,17 +220,17 @@ body {
   }
   /*second nav on clothing index.html*/
   .nav-tabs {
-    padding-left: 5%;
     margin: 0 auto;
     margin-top: 20px;
     background-color: rgba(184, 209, 218, 1.0);
     width: 100%;
     border: 2px solid white;
+    padding-left: 18.5%;
   }
   .nav-item {
     font-size: 1.4em;
-    padding-left: 2em;
-    padding-right: 2em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
   }
   .nav-link {
     color: black;
