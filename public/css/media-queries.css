@@ -121,10 +121,10 @@
       font-size: 1.0em;
     }
     input[type="checkbox"]{
-      -ms-transform: scale(2.05); /* IE */
-      -moz-transform: scale(2.05); /* FF */
-      -webkit-transform: scale(2.05); /* Safari and Chrome */
-      -o-transform: scale(2.05); /* Opera */
+      -ms-transform: scale(1.7); /* IE */
+      -moz-transform: scale(1.7); /* FF */
+      -webkit-transform: scale(1.7); /* Safari and Chrome */
+      -o-transform: scale(1.7); /* Opera */
       margin-right: 6px;
     }
     label {
