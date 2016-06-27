@@ -1,418 +1,585 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any styles
- * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
- * file per style scope.
- *
- *= require_tree .
- *= require_self
- */
- * {
-   box-sizing: border-box;
- }
- html {
-   margin: 0;
- }
- body {
-   margin: 0;
-   padding: 0;
-   color: black;
-   font-family: "Lekton";
-   background: linear-gradient(
-     rgba(255, 255, 255, 0.6),
-     rgba(0, 0, 0, 0.3)
-     ),
-     url("plan2.jpg");
-     background-size: cover;
-     background-attachment: fixed;
-     height: 3000px;
-     text-align: center;
-   }
-   h1 {
-     text-align: center;
-     display: inline;
-     font-family: "Handlee";
-     font-size: 3.25vmax;
-     color: black;
-     text-shadow: 0px 5.5px 5.5px white;
-   }
-   h2 {
-     text-align: center;
-     font-size: 18px;
-     font-weight: bolder;
-   }
-   img {
-     max-width: 100%;
-     max-height: 20%;
-   }
-   button {
-     width: 15%;
-     margin-left: 40%;
-   }
-   a {
-     text-decoration: none;
-     color: #232323;
-     /*transition: font-weight 0.1s ease-in;*/
-     text-align: center;
-   }
-   a:hover {
-     color: black;
-     text-decoration: none;
-     font-weight: bold;
-   }
-   /*clothing images*/
-   .thumbnail {
-     margin: 0 auto;
-     -webkit-transition: all 1s ease; /* Safari and Chrome */
-     -moz-transition: all 1s ease; /* Firefox */
-     -ms-transition: all 1s ease; /* IE 9 */
-     -o-transition: all 1s ease; /* Opera */
-     transition: all 1s ease;
-   }
-   .thumbnail:hover {
-     -webkit-transform:scale(1.5); /* Safari and Chrome */
-     -moz-transform:scale(1.5); /* Firefox */
-     -ms-transform:scale(1.5); /* IE 9 */
-     -o-transform:scale(1.5); /* Opera */
-     transform:scale(1.5);
-   }
+/*DESKTOP*/
+* {
+  box-sizing: border-box;
+}
+html, body{
+  margin: 0px;
+  width: 100%;
+  height: 100%;
+  padding: 0px;
+  overflow-x: hidden;
+  color: black;
+  font-family: "Lekton";
+}
+body {
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.6),
+    rgba(0, 0, 0, 0.3)
+    ),
+    url("../images/plan2.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 2000px;
+    text-align: center;
+  }
+  h1 {
+    text-align: center;
+    font-family: "Handlee";
+    font-size: 3.0em;
+    color: black;
+    text-shadow: 0px 5.5px 5.5px white;
+    margin-top: 60px;
+  }
+  h2 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bolder;
+  }
+  img {
+    max-width: 100%;
+    max-height: 20%;
+  }
+  button {
+    width: 15%;
+    margin-left: 40%;
+  }
+  a {
+    text-decoration: none;
+    color: #232323;
+    text-align: center;
+  }
+  a:hover {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  /*clothing images*/
+  .thumbnail {
+    margin: 0 auto;
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+  }
+  .thumbnail:hover {
+    -webkit-transform:scale(1.5); /* Safari and Chrome */
+    -moz-transform:scale(1.5); /* Firefox */
+    -ms-transform:scale(1.5); /* IE 9 */
+    -o-transform:scale(1.5); /* Opera */
+    transform:scale(1.5);
+  }
+  /*top nav bar css*/
 
-   .top-nav{
-     width: 100%;
-     min-height: 30px;
-     background-color: black;
-   }
-   /*top nav bar css*/
-   .top-nav-list{
-     list-style-type: none;
-     margin-left: 45%;
-   }
-   .top-nav-list li{
-     display: inline;
-     font-size: 1.6em;
-     padding: 10px;
-     margin-right: 8%;
-   }
-   .top-nav-list li a{
-     color: white;
-   }
-   @media(max-width: 800px){
-     .top-nav-list {
-       margin-left: .5%;
-       font-size: 0.9em;
-     }
-     .top-nav-list li {
-       padding: 2px;
-     }
-     .weather-forecast{
-       display: none;
-     }
-   }
-   /*side menu*/
-   #menuToggle {
-     display: block;
-     position: relative;
-     top: 63.5px;
-     left: 50px;
-     z-index: 1;
-     -webkit-user-select: none;
-     user-select: none;
-   }
+  .top-nav{
+    width: 100%;
+    min-height: 33px;
+    background-color: black;
+    margin-bottom: 10px;
+  }
+  .top-nav-list{
+    list-style-type: none;
+    margin-left: 30%;
+  }
+  .top-nav-list li{
+    display: inline;
+    font-size: 1.4em;
+    padding: 10px;
+    margin-right: 25px;
+  }
+  .top-nav-list li a{
+    color: white;
+  }
+  /*side menu*/
+  #menuToggle {
+    display: block;
+    position: relative;
+    top: 60px;
+    left: 40px;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
 
-   #menuToggle input {
-     display: block;
-     width: 40px;
-     height: 32px;
-     position: absolute;
-     top: -7px;
-     left: -5px;
-     cursor: pointer;
-     opacity: 0; /* hide this */
-     z-index: 2; /* and place it over the hamburger */
-     -webkit-touch-callout: none;
-   }
+  #menuToggle input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0; /* hide this */
+    z-index: 2; /* and place it over the hamburger */
+    -webkit-touch-callout: none;
+  }
 
-   #menuToggle span {
-     display: block;
-     width: 33px;
-     height: 4px;
-     margin-bottom: 5px;
-     position: relative;
-     background: black;
-     border-radius: 3px;
-     z-index: 1;
-     transform-origin: 4px 0px;
-     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-     background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-     opacity 0.55s ease;
-   }
-   #menuToggle span:first-child {
-     transform-origin: 0% 0%;
-   }
-   #menuToggle span:nth-last-child(2) {
-     transform-origin: 0% 100%;
-   }
-   #menuToggle input:checked ~ span {
-     opacity: 1;
-     transform: rotate(45deg) translate(-2px, -1px);
-     background: #232323;
-   }
-   #menuToggle input:checked ~ span:nth-last-child(3) {
-     opacity: 0;
-     transform: rotate(0deg) scale(0.2, 0.2);
-   }
-   #menuToggle input:checked ~ span:nth-last-child(2) {
-     opacity: 1;
-     transform: rotate(-45deg) translate(0, -1px);
-   }
-   #menu {
-     position: absolute;
-     width: 300px;
-     margin: -100px 0 0 -50px;
-     padding: 50px;
-     padding-top: 125px;
-     height: 100vh;
-     background: #ededed;
-     list-style-type: none;
-     -webkit-font-smoothing: antialiased;
-     transform-origin: 0% 0%;
-     transform: translate(-100%, 0);
-     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-   }
-   #menu li {
-     padding: 10px 0;
-     font-size: 25px;
-     margin-top: 20px;
-   }
-   #menuToggle input:checked ~ ul {
-     transform: scale(1.0, 1.0);
-     opacity: 1;
-   }
-   .weather-forecast {
-     background-color: rgba(255,255,255,0.2);
-     min-height: 200px;
-     transition: background-color, 1.0s ease-in;
-     filter: blur(20px);
-     width: 20%;
-     border-radius: 10%;
-   }
-   /*weather forecast and temp div css*/
-   .weather-forecast:hover {
-     background-color: white;
-   }
-   .show-weather-icon {
-     font-size: 22px;
-   }
-   #loc {
-     font-size: 20px;
-   }
-   /*main container for outfits index.html */
-   .outfits-col {
-     background-color: rgba(255,255,255,0.9);
-     min-height: 600px;
-     font-size: 18px;
-     margin-top: 40px;
-   }
-   /*index.html page for viewing all clothes*/
-   .all-clothes-index-div{
-     background-color: rgba(255,255,255,0.7);
-   }
-   /*file uploads form*/
-   .file-uploads{
-     background-color: rgba(255,255,255,0.9);
-     width: 50%;
-     margin: 0 auto;
-     margin-top: 10%;
-   }
+  #menuToggle span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    background: black;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+    opacity 0.55s ease;
+  }
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+  #menuToggle input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+  #menuToggle input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+  #menuToggle input:checked ~ span:nth-last-child(2) {
+    opacity: 1;
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+  #menu {
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    height: 100vh;
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  }
+  #menu li {
+    padding: 10px 0;
+    font-size: 25px;
+    margin-top: 15px;
+  }
+  #menuToggle input:checked ~ ul {
+    transform: scale(1.0, 1.0);
+    opacity: 1;
+  }
+  .weather-forecast {
+    background-color: rgba(255,255,255,0.2);
+    min-height: 200px;
+    transition: background-color, 1.0s ease-in;
+    filter: blur(20px);
+    width: 20%;
+    border-radius: 10%;
+  }
+  /*weather forecast and temp div css*/
+  .weather-forecast:hover {
+    background-color: white;
+  }
+  .show-weather-icon {
+    font-size: 22px;
+  }
+  #loc {
+    font-size: 20px;
+  }
+  /*main container for outfits index.html */
+  .outfits-col {
+    background-color: rgba(255,255,255,0.9);
+    min-height: 600px;
+    font-size: 18px;
+    margin-top: 40px;
+  }
+  /*index.html page for viewing all clothes*/
+  .all-clothes-index-div{
+    background-color: rgba(255,255,255,0.7);
+  }
+  /*file uploads form*/
+  .file-uploads{
+    background-color: rgba(255,255,255,0.9);
+    width: 55%;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  .file-uploads input{
+    font-size: 15px;
+    margin: 0 auto;
+    background-color: #BBD3F6;
+    width: 40%;
+    display: block;
+    margin-top: 1
+  }
+  .file-uploads input[type="submit"]{
+    margin-top: 30px;
+    width: 20%;
+    background-color: white;
+  }
+  .file-uploads label {
+    margin-top: 20px;
+    font-size: 1.4em;
+  }
+  .upload-button {
+    width: 80%;
+  }
+  /*second nav on clothing index.html*/
+  .nav-tabs {
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: rgba(184, 209, 218, 1.0);
+    width: 100%;
+    border: 2px solid white;
+    padding-left: 17.5%;
+  }
+  .nav-item {
+    font-size: 1.4em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+  .nav-link {
+    color: black;
+    font-weight: bolder;
+  }
+  .dropdown-div {
+    min-height: 200px;
+    width: 80%;
+    position: absolute;
+    z-index: 100;
+    margin-top: -0.5px;
+  }
+  .nested-dropdown-ul{
+    list-style-type: none;
+    font-weight: bold;
+    display: none;
+    text-align: center;
+  }
+  .nested-dropdown {
+    margin-top: 10px;
+    padding-bottom: 10px;
+  }
+  .nested-dropdown a {
+    background-color: rgba(255,255,255,0.3);
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  .nested-dropdown a:hover{
+    box-shadow: 0 0 40px white;
+  }
+  .sub-nested-dropdown, .sub-nested-dropdown1 {
+    display: none;
+    margin-top: 30px;
+    list-style-type: none;
+  }
+  .sub-nested-dropdown li, .sub-nested-dropdown1 li{
+    width: 20%;
+    display: inline-table;
+    margin: 2px;
+  }
+  .sub-dropdown-list {
+    font-size: .8em;
+  }
+  .caret {
+    border: 5px solid transparent;
+    display: inline-block;
+    width: 0;
+    height: 0;
+    opacity: 0.9;
+    /*vertical-align: top;*/
+  }
+  .caret-right {
+    border-left: 5px solid;
+  }
+  .caret-down{
+    border-top: 5px solid;
+  }
+  input[type="checkbox"]{
+    -ms-transform: scale(1.4); /* IE */
+    -moz-transform: scale(1.4); /* FF */
+    -webkit-transform: scale(1.4); /* Safari and Chrome */
+    -o-transform: scale(1.4); /* Opera */
+  }
+  label {
+    margin-right: 6px;
+    margin-left: 6px;
+    margin-bottom: 3px;
+    font-size: 1em;
 
-   .file-uploads input{
-     font-size: 15px;
-     margin: 0 auto;
-     background-color: #BBD3F6;
-     width: 40%;
-     display: block;
-     margin-top: 1
-   }
-   .file-uploads input[type="submit"]{
-     margin-top: 30px;
-     width: 20%;
-     background-color: white;
-   }
-   /*second nav on clothing index.html*/
-   .nav-tabs {
-     padding-left: 5%;
-     margin: 0 auto;
-     margin-top: 20px;
-     background-color: rgba(184, 209, 218, 1.0);
-     width: 100%;
-     border: 2px solid white;
-   }
-   .nav-item {
-     font-size: 1.4em;
-     padding-left: 2em;
-     padding-right: 2em;
-   }
-   .nav-link {
-     color: black;
-     font-weight: bolder;
-   }
-   .dropdown-div {
-     min-height: 200px;
-     width: 80%;
-     position: absolute;
-     z-index: 100;
-     margin-top: -0.5px;
-   }
-   .nested-dropdown-ul{
-     list-style-type: none;
-     font-weight: bold;
-     display: none;
-     text-align: center;
-   }
-   .nested-dropdown {
-     margin-top: 10px;
-     padding-bottom: 10px;
-   }
-   .nested-dropdown a {
-     background-color: rgba(255,255,255,0.3);
-     width: 90%;
-     margin: 0 auto;
-     padding: 10px;
-     cursor: pointer;
-     border-radius: 2px;
-   }
-   .nested-dropdown a:hover{
-     box-shadow: 0 0 40px white;
-   }
-   .sub-nested-dropdown, .sub-nested-dropdown1 {
-     display: none;
-     margin-top: 30px;
-     list-style-type: none;
-   }
-   .sub-nested-dropdown li, .sub-nested-dropdown1 li{
-     width: 20%;
-     display: inline-table;
-     margin: 2px;
-   }
-   .sub-dropdown-list {
-     font-size: .8em;
-   }
-   .caret {
-     border: 5px solid transparent;
-     display: inline-block;
-     width: 0;
-     height: 0;
-     opacity: 0.9;
-     /*vertical-align: top;*/
-   }
-   .caret-right {
-     border-left: 5px solid;
-   }
-   .caret-down{
-     border-top: 5px solid;
-   }
-   input[type="checkbox"]{
-     -ms-transform: scale(1.4); /* IE */
-     -moz-transform: scale(1.4); /* FF */
-     -webkit-transform: scale(1.4); /* Safari and Chrome */
-     -o-transform: scale(1.4); /* Opera */
-   }
-   label {
-     margin-right: 6px;
-     margin-left: 6px;
-     margin-bottom: 3px;
-     font-size: 1em;
+  }
+  .clothing-show-img{
+    width: 35%;
+  }
+  /*div container for images on clothes index.html page for images*/
+  .hovereffect {
+    width: 40%;
+    min-height: 220px;
+    max-height: 220px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+    margin: 5px auto;
+    color: white;
+  }
 
-   }
-   .clothing-show-img{
-     width: 35%;
-   }
-   /*div container for images on clothes index.html page for images*/
-   .hovereffect {
-     width: 40%;
-     min-height: 220px;
-     max-height: 220px;
-     overflow: hidden;
-     position: relative;
-     text-align: center;
-     cursor: default;
-     margin: 5px auto;
-     color: white;
-   }
+  .hovereffect .overlay {
+    position: absolute;
+    overflow: hidden;
+    width: 80%;
+    height: 95%;
+    left: 10%;
+    top: 5%;
+    /*border-bottom: 1px solid #FFF;
+    border-top: 1px solid #FFF;*/
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(0,1);
+    -ms-transform: scale(0,1);
+    transform: scale(0,1);
+  }
 
-   .hovereffect .overlay {
-     position: absolute;
-     overflow: hidden;
-     width: 80%;
-     height: 95%;
-     left: 10%;
-     top: 5%;
-     /*border-bottom: 1px solid #FFF;
-     border-top: 1px solid #FFF;*/
-     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-     transition: opacity 0.35s, transform 0.35s;
-     -webkit-transform: scale(0,1);
-     -ms-transform: scale(0,1);
-     transform: scale(0,1);
-   }
+  .hovereffect:hover .overlay {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
 
-   .hovereffect:hover .overlay {
-     opacity: 1;
-     filter: alpha(opacity=100);
-     -webkit-transform: scale(1);
-     -ms-transform: scale(1);
-     transform: scale(1);
-   }
+  .hovereffect img {
+    display: block;
+    position: relative;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
 
-   .hovereffect img {
-     display: block;
-     position: relative;
-     -webkit-transition: all 0.35s;
-     transition: all 0.35s;
-   }
+  .hovereffect:hover img {
+    filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
+    filter: brightness(0.6);
+    -webkit-filter: brightness(0.6);
+  }
 
-   .hovereffect:hover img {
-     filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
-     filter: brightness(0.6);
-     -webkit-filter: brightness(0.6);
-   }
+  .hovereffect h2 {
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    font-size: 17px;
+    background-color: transparent;
+    color: #FFF;
+    padding: 0.5em 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,-100%,0);
+    transform: translate3d(0,-100%,0);
+  }
 
-   .hovereffect h2 {
-     text-transform: uppercase;
-     text-align: center;
-     position: relative;
-     font-size: 17px;
-     background-color: transparent;
-     color: #FFF;
-     padding: 0.5em 0;
-     opacity: 0;
-     filter: alpha(opacity=0);
-     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-     transition: opacity 0.35s, transform 0.35s;
-     -webkit-transform: translate3d(0,-100%,0);
-     transform: translate3d(0,-100%,0);
-   }
+  .hovereffect a, hovereffect p {
+    color: #FFF;
+    padding: 0.5em 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(0,100%,0);
+    transform: translate3d(0,100%,0);
+  }
 
-   .hovereffect a, hovereffect p {
-     color: #FFF;
-     padding: 0.5em 0;
-     opacity: 0;
-     filter: alpha(opacity=0);
-     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-     transition: opacity 0.35s, transform 0.35s;
-     -webkit-transform: translate3d(0,100%,0);
-     transform: translate3d(0,100%,0);
-   }
+  .hovereffect:hover a, .hovereffect:hover p, .hovereffect:hover h2 {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+  .responsive-menu, .responsive-menu ul {
+    display: none;
+  }
 
-   .hovereffect:hover a, .hovereffect:hover p, .hovereffect:hover h2 {
-     opacity: 1;
-     filter: alpha(opacity=100);
-     -webkit-transform: translate3d(0,0,0);
-     transform: translate3d(0,0,0);
-   }
+
+  /*MEDIA QUERIES*/
+  @media(max-width: 579px){
+    body{
+      background: linear-gradient(
+        rgba(255, 255, 255, 0.6),
+        rgba(0, 0, 0, 0.2)
+        ), url("../images/plan2.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      }
+    }
+
+    @media screen and (max-width: 1000px){
+      .weather-forecast{
+        margin: 0 auto;
+        margin-top: 50px;
+        width: 100%;
+        background-color: rgba(255,255,255,0.5);
+        box-shadow: 0 0 20px rgb(181, 194, 219);
+      }
+      .weather-forecast:hover{
+        box-shadow: 10px 10px 200px rgb(181, 194, 219);
+      }
+    }
+
+    @media screen and (max-width: 579px){
+
+      .top-nav{
+        margin: 0 auto;
+        width: 100%;
+      }
+      .top-nav-list{
+        list-style-type: none;
+        margin: 0 auto;
+        margin-right: 0px;
+        padding: 0px;
+      }
+      .top-nav-list li {
+        margin: 0 auto;
+        padding: 6px;
+        font-size: 1.5em;
+      }
+      .weather-forecast{
+        margin-top: 20px;
+        padding-top: 5px;
+        width: 100%;
+        background-color: rgba(181, 194, 219, 0.5);
+        box-shadow: 0 0 20px rgb(181, 194, 219);
+      }
+      .weather-forecast h2{
+        margin-top: 20px;
+      }
+      .weather-forecast:hover{
+        background-color: rgba(181, 194, 219, 1.0);
+        box-shadow: 5px 5px 20px rgb(203, 211, 213);
+      }
+
+      #menuToggle {
+        display: none;
+        /*top: 38.5px;*/
+      }
+
+      .nav-tabs {
+        margin: 0px auto;
+        margin-top: 50px;
+        background-color: rgba(184, 209, 218, 1.0);
+        padding-left: 0%;
+      }
+      .nav-item {
+        padding-left: 1px;
+        padding-right: 1px;
+        font-size: 1.6em;
+        margin: 0 auto;
+        margin-left: 10px;
+        text-align: center;
+      }
+      .dropdown-div {
+        min-height: 200px;
+        width: 100%;
+        position: absolute;
+        z-index: 100;
+        margin-top: -0.5px;
+      }
+      .nested-dropdown-ul{
+        list-style-type: none;
+        font-weight: bold;
+        display: none;
+        text-align: center;
+      }
+      .sub-nested-dropdown, .sub-nested-dropdown1 {
+        display: none;
+        margin-top: 15px;
+        list-style-type: none;
+      }
+      .sub-nested-dropdown li, .sub-nested-dropdown1 li{
+        width: 20%;
+        display: block;
+        margin: 2px;
+      }
+      .sub-dropdown-list {
+        font-size: 1.0em;
+      }
+      input[type="checkbox"]{
+        -ms-transform: scale(1.7); /* IE */
+        -moz-transform: scale(1.7); /* FF */
+        -webkit-transform: scale(1.7); /* Safari and Chrome */
+        -o-transform: scale(1.7); /* Opera */
+        margin-right: 6px;
+      }
+      label {
+        margin-left: 8px;
+        padding-left: 2px;
+        margin-bottom: 3px;
+        font-size: 1em;
+        letter-spacing: 2px;
+      }
+      .clothing-show-img{
+        width: 82%;
+        margin-top: 30px;
+      }
+      .thumbnail:hover {
+        -webkit-transform:scale(1.2 ); /* Safari and Chrome */
+        -moz-transform:scale(1.2 ); /* Firefox */
+        -ms-transform:scale(1.2 ); /* IE 9 */
+        -o-transform:scale(1.2 ); /* Opera */
+        transform:scale(1.2 );
+      }
+      .responsive-menu, .responsive-menu ul {
+        display: inline;
+      }
+      .responsive-menu li{
+        margin: 0 auto;
+      }
+      .hidden-menu-list button {
+        font-size: 1.6em;
+        padding-top: 10px;
+        padding-bottom: 10px;
+      }
+      .btn {
+        width: 100%;
+        margin: 0 auto;
+      }
+      .btn:hover{
+        box-shadow: 5px 5px 20px rgba(184, 209, 218, 1.0);
+      }
+      .toggle-responsive-menu {
+        background-color: rgb(232, 230, 184);
+        font-weight: bolder;
+        font-size: 1.6em;
+      }
+      /*file uploads form*/
+      .file-uploads{
+        background-color: rgba(255,255,255,0.9);
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 40px;
+        padding-bottom: 5px;
+      }
+      .file-uploads input{
+        font-size: 15px;
+        margin: 0 auto;
+        background-color: #BBD3F6;
+        width: 80%;
+        display: block;
+        margin-top: 1
+      }
+      .file-uploads input[type="submit"]{
+        margin-top: 30px;
+        padding: 5px;
+        margin-bottom: 60px;
+        width: 90%;
+        background-color: white;
+      }
+      .file-uploads label {
+        margin-top: 20px;
+        font-size: 1.4em;
+      }
+    }
