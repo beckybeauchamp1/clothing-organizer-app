@@ -2,7 +2,7 @@
   body{
     background: linear-gradient(
       rgba(255, 255, 255, 0.6),
-      rgba(0, 0, 0, 0.3)
+      rgba(0, 0, 0, 0.2)
       ), url("../images/plan2.jpg") no-repeat center center fixed;
       -webkit-background-size: cover;
       -moz-background-size: cover;
@@ -27,35 +27,40 @@
   @media screen and (max-width: 579px){
 
     .top-nav{
-      margin-left: 0px;
-      margin-right: 0px;
+      margin: 0 auto;
       width: 100%;
-      overflow: visible;
     }
     .top-nav-list{
       list-style-type: none;
       margin: 0 auto;
-      margin-right: 20px;
+      margin-right: 0px;
+      padding: 0px;
     }
     .top-nav-list li {
-      margin-right: 1px;
-      padding-right: 1px;
+      margin: 0 auto;
+      padding: 6px;
     }
     .weather-forecast{
-      margin-top: 60px;
+      margin-top: 20px;
+      padding-top: 5px;
       width: 100%;
-      background-color: rgba(255,255,255,0.5);
+      background-color: rgba(181, 194, 219, 0.5);
       box-shadow: 0 0 20px rgb(181, 194, 219);
     }
+    .weather-forecast h2{
+      margin-top: 20px;
+    }
     .weather-forecast:hover{
-      box-shadow: 10px 10px 200px rgb(181, 194, 219);
+      background-color: rgba(181, 194, 219, 1.0);
+      box-shadow: 5px 5px 20px rgb(203, 211, 213);
     }
 
     #menuToggle {
-      top: 38.5px;
+      display: none;
+      /*top: 38.5px;*/
     }
 
-    #menuToggle span {
+    /*#menuToggle span {
       display: block;
       width: 36px;
       height: 6px;
@@ -73,20 +78,23 @@
     }
     #menu li a:hover{
       text-decoration: none;
-    }
+    }*/
     .nav-tabs {
       margin: 0px auto;
       margin-top: 50px;
       background-color: rgba(184, 209, 218, 1.0);
+      padding-left: 0%;
     }
     .nav-item {
-      padding: 2px;
-      font-size: 1.6em;
+      padding-left: 2px;
+      padding-right: 2px;
+      font-size: 1.38em;
+      margin: 0 auto;
       text-align: center;
     }
     .dropdown-div {
       min-height: 200px;
-      width: 80%;
+      width: 90%;
       position: absolute;
       z-index: 100;
       margin-top: -0.5px;
@@ -133,5 +141,27 @@
       -o-transform:scale(1.2 ); /* Opera */
       transform:scale(1.2 );
     }
-
+    .responsive-menu, .responsive-menu ul {
+      display: inline;
+    }
+    .responsive-menu li{
+      margin: 0 auto;
+    }
+    .hidden-menu-list button {
+      font-size: 1.3em;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+    .btn {
+      width: 100%;
+      margin: 0 auto;
+    }
+    .btn:hover{
+      box-shadow: 5px 5px 20px rgba(184, 209, 218, 1.0);
+    }
+    .toggle-responsive-menu {
+      background-color: rgb(232, 230, 184);
+      font-weight: bolder;
+      font-size: 1.3em;
+    }
   }

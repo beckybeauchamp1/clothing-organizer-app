@@ -64,7 +64,6 @@
 
     window.onload = $scope.grabLocation();
 
-
   });
 
 

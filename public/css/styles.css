@@ -68,16 +68,17 @@ body {
     -o-transform:scale(1.5); /* Opera */
     transform:scale(1.5);
   }
+  /*top nav bar css*/
+
   .top-nav{
     width: 100%;
     min-height: 33px;
     background-color: black;
     margin-bottom: 10px;
   }
-  /*top nav bar css*/
   .top-nav-list{
     list-style-type: none;
-    margin-right: 15%;
+    margin-left: 30%;
   }
   .top-nav-list li{
     display: inline;
@@ -225,7 +226,7 @@ body {
     background-color: rgba(184, 209, 218, 1.0);
     width: 100%;
     border: 2px solid white;
-    padding-left: 18.5%;
+    padding-left: 17.5%;
   }
   .nav-item {
     font-size: 1.4em;
@@ -389,4 +390,7 @@ body {
     filter: alpha(opacity=100);
     -webkit-transform: translate3d(0,0,0);
     transform: translate3d(0,0,0);
+  }
+  .responsive-menu, .responsive-menu ul {
+    display: none;
   }
