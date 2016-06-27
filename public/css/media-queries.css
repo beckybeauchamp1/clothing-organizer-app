@@ -39,6 +39,7 @@
     .top-nav-list li {
       margin: 0 auto;
       padding: 6px;
+      font-size: 1.5em;
     }
     .weather-forecast{
       margin-top: 20px;
@@ -86,10 +87,11 @@
       padding-left: 0%;
     }
     .nav-item {
-      padding-left: 2px;
-      padding-right: 2px;
-      font-size: 1.38em;
+      padding-left: 1px;
+      padding-right: 1px;
+      font-size: 1.6em;
       margin: 0 auto;
+      margin-left: 10px;
       text-align: center;
     }
     .dropdown-div {
@@ -123,6 +125,7 @@
       -moz-transform: scale(2.05); /* FF */
       -webkit-transform: scale(2.05); /* Safari and Chrome */
       -o-transform: scale(2.05); /* Opera */
+      margin-right: 6px;
     }
     label {
       margin-right: 6px;
@@ -148,7 +151,7 @@
       margin: 0 auto;
     }
     .hidden-menu-list button {
-      font-size: 1.3em;
+      font-size: 1.6em;
       padding-top: 10px;
       padding-bottom: 10px;
     }
@@ -162,6 +165,6 @@
     .toggle-responsive-menu {
       background-color: rgb(232, 230, 184);
       font-weight: bolder;
-      font-size: 1.3em;
+      font-size: 1.6em;
     }
   }
