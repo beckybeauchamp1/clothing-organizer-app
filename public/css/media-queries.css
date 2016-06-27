@@ -96,7 +96,7 @@
     }
     .dropdown-div {
       min-height: 200px;
-      width: 90%;
+      width: 100%;
       position: absolute;
       z-index: 100;
       margin-top: -0.5px;
