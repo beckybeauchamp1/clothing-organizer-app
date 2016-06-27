@@ -28,11 +28,11 @@
    font-family: "Lekton";
  }
  body {
-   background: linear-gradient(
+   /*background: linear-gradient(
      rgba(255, 255, 255, 0.6),
      rgba(0, 0, 0, 0.3)
      ),
-     url("../images/plan2.jpg");
+     url("../images/plan2.jpg");*/
      background-size: cover;
      background-attachment: fixed;
      min-height: 2000px;
