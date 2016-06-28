@@ -168,4 +168,11 @@
       font-weight: bolder;
       font-size: 1.6em;
     }
+    .image-button {
+      width: 90%;
+      padding: 15px;
+      background-color: rgb(199, 207, 205);
+      font-weight: bolder;
+      font-size: 1.5em;
+    }
   }
