@@ -8,8 +8,8 @@
       templateUrl: 'js/_responsive_menu.html',
       link: function(scope){
 
-        scope.showMenu =  true;
-        scope.menuName = "Close Menu";
+        scope.showMenu =  false;
+        scope.menuName = "View Options";
         scope.toggleMenu = function() {
           scope.showMenu ? scope.showMenu = false : scope.showMenu = true
           scope.showMenu ? scope.menuName = "Close Menu" : scope.menuName = "View Options"
