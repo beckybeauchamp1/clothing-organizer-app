@@ -15,7 +15,7 @@
             $(".sub-nested-dropdown").css("display", "none")
           }
           else {
-            $(".dropdown-div").css("background-color", "rgba(184, 209, 218, 1.0)");
+            $(".dropdown-div").css("background-color", "rgb(232, 232, 232)");
             $(".dropdown-div").css("box-shadow", "5px 5px 5px gray");
             $(".nested-dropdown-ul").css("display", "inline");
           }

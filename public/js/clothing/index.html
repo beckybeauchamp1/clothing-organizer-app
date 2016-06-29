@@ -4,15 +4,15 @@
     <div class="col-md-5">
       <h3><a data-ui-sref="clothingShow({id: c.id})">{{c.title}}</a></h3>
       <p>Description: {{c.description}}</p>
-      <p>Size: {{c.size}}</p>
+      <p class="clothing-details">Size: {{c.size}}</p>
     </div>
-    <div class="col-md-1">
+    <div class="col-md-1 clothing-details">
       <h3>$ {{c.cost}}</h3>
     </div>
     <div class="col-md-6">
-      <h2><button class="btn btn-default image-button" data-ng-hide="checkForImages(c.photos)" href="clothing/{{c.id}}/photos/new">Add Image</button></h2>
+      <h2><button data-ng-hide="checkForImages(c.photos)" class="btn btn-primary image-button"><a href="clothing/{{c.id}}/photos/new" data-ng-hide="checkForImages(c.photos)">Add Image</a></button></h2>
       <div data-ng-repeat="img in c.photos">
-        <div class="hovereffect">
+        <div class="image-photo hovereffect">
           <img class="img-responsive" data-ng-show="img.image" src="{{img.image.url}}">
           <div class="overlay">
             <h2>{{img.description}}</h2>

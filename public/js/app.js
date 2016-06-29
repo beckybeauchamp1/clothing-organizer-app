@@ -17,14 +17,8 @@
 
   function RouterFunction($stateProvider){
     $stateProvider
-    .state("main", {
-      url: '/home',
-      templateUrl: "./js/home.html",
-      controller: "homeController",
-      controllerAs: "homeVM"
-    })
     .state("initalLoad", {
-      url: "",
+      url: "/home",
       templateUrl: "./js/home.html",
       controller: "MainController",
       controllerAs: "MainVM"

@@ -45,14 +45,14 @@
       margin-top: 20px;
       padding-top: 5px;
       width: 100%;
-      background-color: rgba(181, 194, 219, 0.5);
-      box-shadow: 0 0 20px rgb(181, 194, 219);
+      background-color: rgba(255,255,255,0.65);
+      box-shadow: 0 0 20px rgb(235, 247, 247);
     }
     .weather-forecast h2{
       margin-top: 20px;
     }
     .weather-forecast:hover{
-      background-color: rgba(181, 194, 219, 1.0);
+      background-color: white;
       box-shadow: 5px 5px 20px rgb(203, 211, 213);
     }
 
@@ -83,7 +83,6 @@
     .nav-tabs {
       margin: 0px auto;
       margin-top: 50px;
-      background-color: rgba(184, 209, 218, 1.0);
       padding-left: 0%;
     }
     .nav-item {
@@ -169,10 +168,28 @@
       font-size: 1.6em;
     }
     .image-button {
+      width: 50%;
+      padding: 8px;
+      font-size: 1.0em;
+    }
+    .clothing-details {
+      display: none;
+    }
+    .hovereffect img {
       width: 90%;
-      padding: 15px;
-      background-color: rgb(199, 207, 205);
-      font-weight: bolder;
-      font-size: 1.5em;
+    }
+    .img-responsive {
+      width: 100%;
+    }
+    .image-photo {
+      width: 100%;
+      min-height: 300px;
+      max-height: 300px;
+      overflow: hidden;
+      /*min-height: 2%;*/
+    }
+    .image-photo img {
+      width: 75%;
+      margin: 0 auto;
     }
   }
