@@ -1,0 +1,17 @@
+<div class="container">
+   <button data-ng-click="openPopUp()" id="openPopupOne" class="main-button">Log Today's Outfits</button>
+   <div class="overlay-popup"></div>
+   <div class="popup one">
+     <h3>Today's Date: {{grabTodaysDate()}}</h3>
+      <p>Search for Clothing</p>
+      <div class="input-group input-group-popup">
+        <input data-ng-model="searchValue" type="text" class="form-control form-control-popup" placeholder="Search Clothing...">
+        <span class="input-group-btn input-group-btn-popup">
+          <button class="btn btn-default search-button-popup" type="button">Submit</button>
+        </span>
+      </div>
+      <ul class="popup-ul">
+         <li><button data-ng-click="closePopUp()" id="closePopUpOne">Close</button></li>
+      </ul>
+   </div>
+</div>

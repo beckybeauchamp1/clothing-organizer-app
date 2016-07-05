@@ -5,7 +5,7 @@
   .module('clothing-app')
   .directive('sideBar', function(){
     return {
-      templateUrl: 'js/_side_bar.html',
+      templateUrl: 'js/mainAppDirectives/_side_bar.html',
       link: function(scope){
         scope.sideBar = "Side Bar"
       }

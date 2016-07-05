@@ -1,22 +1,17 @@
-<div class="input-group">
+<pop-up></pop-up>
+<!-- <div class="input-group">
   <input data-ng-model="searchValue" type="text" class="form-control" placeholder="Search Clothing...">
   <span class="input-group-btn">
     <button class="btn btn-default search-button" type="button">Submit</button>
   </span>
-</div>
-<clothing-nav></clothing-nav>
-<div class="row all-clothes-index-div">
-  <div data-ng-repeat="c in clothes | limitTo: 30 | filter:{type: clothingType} | filter:filterColors | filter:searchValue | orderBy:'-times_worn'" class="row">
-    <div class="col-md-5">
-      <h3><a data-ui-sref="clothingShow({id: c.id})">{{c.title}}</a></h3>
+</div> -->
+<div class="row all-clothes-index-div all-clothes-search-div">
+  <div data-ng-repeat="c in clothes | filter:searchValue | orderBy:'-times_worn'" class="row">
+    <div data-ng-show="searchValue" class="col-md-12 clothing-div-info">
+      <h3><a data-ui-sref="clothingShow({id: c.id})">{{c.title}}</a> <a data-ng-click="wearClothing({id: c.id, timesWorn: c.times_worn})"class="save-icon"><i class="fa fa-star" aria-hidden="true"></i></a></h3>
       <p>Description: {{c.description}}</p>
       <p class="clothing-details">Size: {{c.size}}</p>
-    </div>
-    <div class="col-md-1 clothing-details">
-      <h3>$ {{c.cost}}</h3>
-    </div>
-    <div class="col-md-6">
-      <h2><button data-ng-hide="checkForImages(c.photos)" class="btn btn-primary image-button"><a href="clothing/{{c.id}}/photos/new" data-ng-hide="checkForImages(c.photos)">Add Image</a></button></h2>
+      <h2><button data-ng-hide="checkForImages(c.photos)" class="btn btn-primary image-button img-button-todays-clothing"><a href="clothing/{{c.id}}/photos/new" data-ng-hide="checkForImages(c.photos)">Add Image</a></button></h2>
       <div data-ng-repeat="img in c.photos">
         <div class="image-photo hovereffect">
           <img class="img-responsive" data-ng-show="img.image" src="{{img.image.url}}">

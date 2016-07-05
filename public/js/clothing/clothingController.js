@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('clothing')
-.controller('ClothingController', function($scope, ClothingFactory, DesignerFactory, $stateParams){
+.controller('ClothingController', function($scope, ClothingFactory, DesignerFactory, $stateParams, $state){
 
   // Should this be here
   $scope.designers = DesignerFactory.query();
@@ -47,5 +47,21 @@ angular.module('clothing')
     return clothing;
   }
 
+  $scope.grabTodaysDate = function(){
+    var date = new Date();
+    var day = date.getDay();
+    var month = date.getMonth();
+    var year = date.getUTCFullYear();
+    return day + '/' + month + '/' + year ;
+  }
+
+  $scope.wearClothing = function(clothing) {
+    console.log(clothing.timesWorn);
+    console.log(clothing)
+    ClothingFactory.saveClothing({id: clothing.id, times_worn: parseInt(clothing.timesWorn) + 1}).$promise.then(function(data) {
+      console.log(data);
+      $state.go("clothingShow", {id: clothing.id}, {reload: true})
+  });
+}
 
 });

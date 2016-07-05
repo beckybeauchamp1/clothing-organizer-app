@@ -5,7 +5,7 @@
   .module('clothing-app')
   .directive('login', function(){
     return {
-      templateUrl: 'js/_login.html'
+      templateUrl: 'js/mainAppDirectives/_login.html'
     }
   });
 

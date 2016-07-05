@@ -19,9 +19,16 @@
       },
       getPhotos: {
         method: "GET",
-        url: "https://clothing-organizer-app.herokuapp.com/photos/:id",
+        url: "http://localhost:3000/photos/:id",
         isArray: true
-      }
+      },
+      getOnePhoto: {
+        method: "GET",
+        params: {
+          id: '@id'
+        },
+        url: "http://localhost:3000/photos/:id"
+      },
     });
   }
 })();

@@ -18,14 +18,26 @@
   function RouterFunction($stateProvider){
     $stateProvider
     .state("initalLoad", {
-      url: "/home",
+      url: "",
       templateUrl: "./js/home.html",
+      controller: "MainController",
+      controllerAs: "MainVM"
+    })
+    .state('photoShow', {
+      url: "/photos/:id",
+      templateUrl: "./js/photos/show.html",
       controller: "MainController",
       controllerAs: "MainVM"
     })
     .state("clothing", {
       url: "/clothes",
       templateUrl: "./js/clothing/index.html",
+      controller: "ClothingController",
+      controllerAs: "ClothingVM"
+    })
+    .state("todaysClothing", {
+      url: "/clothes/today",
+      templateUrl: "./js/clothing/timesWorn.html",
       controller: "ClothingController",
       controllerAs: "ClothingVM"
     })

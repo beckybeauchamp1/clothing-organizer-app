@@ -5,7 +5,7 @@
   .module('clothing-app')
   .directive('responsiveMenu', function(){
     return {
-      templateUrl: 'js/_responsive_menu.html',
+      templateUrl: 'js/mainAppDirectives/_responsive_menu.html',
       link: function(scope){
 
         scope.showMenu =  false;

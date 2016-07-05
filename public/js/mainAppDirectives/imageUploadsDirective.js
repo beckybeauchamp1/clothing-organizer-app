@@ -5,7 +5,7 @@
   .module('clothing-app')
   .directive('imageUpload', function(){
     return {
-      templateUrl: 'js/_input_upload.html'
+      templateUrl: 'js/mainAppDirectives/_input_upload.html'
     }
   })
 })();

@@ -25,6 +25,14 @@
         method: "GET",
         url: "http://localhost:3000/dresses/:id",
         isArray: true
+      },
+      saveClothing: {
+        method: "PUT",
+        params: {
+          id: '@id',
+          times_worn: '@times_worn'
+        },
+        url: "http://localhost:3000/clothing/:id"
       }
     });
   }

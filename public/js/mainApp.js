@@ -1,7 +1,7 @@
 (function(){
   angular
   .module("clothing-app")
-  .controller("MainController", function($scope, MainFactory){
+  .controller("MainController", function($scope, MainFactory, $stateParams){
 
     // $scope.photos = MainFactory.getPhotos().$promise.then(function(data){
     //   console.log(data)
@@ -63,6 +63,17 @@
     };
 
     window.onload = $scope.grabLocation();
+
+    $scope.photos = MainFactory.getPhotos().$promise.then(function(data){
+      return $scope.photos = data;
+    });
+
+    $scope.toDate = function(date) {
+      var d = new Date(date);
+      return d.toDateString();
+    }
+
+    $scope.photo = MainFactory.getOnePhoto({id: $stateParams.id})
 
   });
 

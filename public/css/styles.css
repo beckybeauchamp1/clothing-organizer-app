@@ -91,7 +91,7 @@ body {
     color: white;
   }
   .top-nav-list li a:hover {
-    color: rgb(246, 246, 221);
+    color: rgb(246, 246, 221);ails
   }
   /*side menu*/
   #menuToggle {
@@ -230,7 +230,9 @@ body {
     background-color: rgb(232, 232, 232);
     width: 100%;
     border: 2px solid white;
-    padding-left: 17.5%;
+    padding-left: 15%;
+    cursor: pointer;
+    cursor: hand;
   }
   .nav-item {
     font-size: 1.4em;
@@ -413,7 +415,7 @@ body {
   }
   .image-button {
     margin: 0 auto;
-    width: 30%;
+    width: 25%;
   }
   .image-button a {
     color: white;
@@ -719,4 +721,83 @@ body {
       -moz-transition: 0.2s ease all;
       -webkit-transition: 0.2s ease all;
     }
+  }
+
+  .input-group {
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  .input-group input {
+    margin: 0 auto;
+    margin-right: 10px;
+  }
+
+  .search-button {
+    width: 80px;
+  }
+  .save-icon {
+    -webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+    color: black;
+  }
+
+  .save-icon:hover {
+    color: rgb(255, 138, 122);
+    text-shadow: 2px 2px 5px rgb(255, 171, 159);
+    font-size: 1.2em;
+  }
+
+  .clothing-div-info {
+    margin-top: 40px;
+  }
+  .img-button-todays-clothing {
+    width: 10%;
+  }
+  .image-div-home {
+    width: 25%;
+    display: inline-table;
+    margin: 10px;
+  }
+  .home-image {
+    width: 100%;
+    height: 200px;
+  }
+
+  /*show page for individual photos*/
+  .photo-show {
+    width: 75%;
+    margin: 0 auto;
+    background-color: rgba(255,255,255,0.8);
+    min-height: 500px;
+  }
+  .icons {
+    background: #58A199;
+    margin-top: 10px;
+    padding: 8px;
+    margin-bottom: 20px;
+  }
+  .photo-fa-icons {
+    color: white;
+    font-size: 1.5em;
+    margin: 2px 25px;
+  }
+  .photo-show-image-div {
+    width: 75%;
+  }
+  .photo-show-div {
+    display: inline;
+  }
+  .photo-remove {
+    margin: 0 auto;
+  }
+
+  /*clothing show main div*/
+  .clothing-show {
+    width: 75%;
+    margin: 0 auto;
+    background-color: rgba(255,255,255,0.8);
   }

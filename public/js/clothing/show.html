@@ -1,16 +1,25 @@
 <div class="row">
 
   <div class="col-md-12">
+    <div class="clothing-show">
+    <div class="icons">
+      <i class="photo-fa-icons fa fa-pinterest-square" aria-hidden="true"></i>
+      <i class="photo-fa-icons fa fa-amazon" aria-hidden="true"></i>
+      <i class="photo-fa-icons fa fa-instagram" aria-hidden="true"></i>
+      <i class="photo-fa-icons fa fa-cc-paypal" aria-hidden="true"></i>
+      <i class="pull-right photo-fa-icons fa fa-pencil-square-o" aria-hidden="true"></i>
+    </div>
     <h2>{{one.title}}</h2>
     <h3>{{one.description}}</h3>
     <p>Size: {{one.size}} | Length: {{one.length}}</p>
     <p>Cost: ${{one.cost}}.00 | Times Worn: {{one.times_worn}}</p>
-    
+
     <div class="clothing-show-img thumbnail" data-ng-repeat="img in one.photos">
       <img src="{{img.image.url}}">
     </div>
-
-
   </div>
+
+
+</div>
 
 </div>
