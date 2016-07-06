@@ -28,6 +28,7 @@ body {
     color: black;
     text-shadow: 0px 5.5px 5.5px white;
     margin-top: 90px;
+    margin-bottom: 50px;
   }
   h2 {
     text-align: center;
@@ -41,6 +42,9 @@ body {
   button {
     width: 15%;
     margin-left: 40%;
+  }
+  .btn-primary {
+    background-color: rgb(98, 113, 150);
   }
   a {
     text-decoration: none;
@@ -785,6 +789,10 @@ body {
     font-size: 1.5em;
     margin: 2px 25px;
   }
+  .photo-fa-icons:hover {
+    text-shadow: 1px 1px 60px rgb(208, 255, 131);
+    font-weight: bolder;
+  }
   .photo-show-image-div {
     width: 75%;
   }
@@ -794,7 +802,10 @@ body {
   .photo-remove {
     margin: 0 auto;
   }
-
+  .home-h3-recent {
+    margin-top: -1px;
+    margin-bottom: 20px;
+  }
   /*clothing show main div*/
   .clothing-show {
     width: 75%;

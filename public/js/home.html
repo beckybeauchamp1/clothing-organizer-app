@@ -1,7 +1,7 @@
 <div class="row">
   <div class="col-md-8">
-    <h3>Recently Added Clothing</h3>
-    <div class="image-div-home hovereffect" data-ng-repeat="photo in photos">
+    <h3 class="home-h3-recent">Recently Added Clothing</h3>
+    <div class="image-div-home hovereffect" data-ng-repeat="photo in photos | orderBy: '-created_at' | limitTo: 3">
       <img class="home-image img-responsive" src="{{photo.image.url}}">
       <div class="overlay">
         <h2>{{photo.description}}</h2>

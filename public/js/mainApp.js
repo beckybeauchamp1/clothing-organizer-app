@@ -73,7 +73,17 @@
       return d.toDateString();
     }
 
-    $scope.photo = MainFactory.getOnePhoto({id: $stateParams.id})
+    $scope.photo = MainFactory.getOnePhoto({id: $stateParams.id});
+
+    $(".main-menu").on("click", changeBackgroundHome);
+
+    function changeBackgroundHome(){
+      $("body").css("background", "linear-gradient( rgba(255, 255, 255, 0.9),rgba(0, 0, 0, 0.4)),url('./images/plan2.jpg')");
+      $("body").css("background-size", "cover");
+      $("body").css("background-attachment", "fixed");
+    };
+
+
 
   });
 

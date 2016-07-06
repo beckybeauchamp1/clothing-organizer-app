@@ -163,7 +163,7 @@ label {
   box-shadow: 5px 5px 20px rgba(184, 209, 218, 1.0);
 }
 .toggle-responsive-menu {
-  background-color: rgb(232, 230, 184);
+  background-color: rgb(237, 235, 213);
   font-weight: bolder;
   font-size: 1.6em;
 }
@@ -207,14 +207,41 @@ label {
   display: none;
 }
 .image-div-home {
-  width: 90%;
+  width: 100%;
+  margin: 0 auto;
   display: inline-table;
   margin: 0 auto;
   /*margin: 10px;*/
 }
 .home-image {
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   min-height: 300px;
+ }
+ .home-h3-recent {
+   margin-top: 80px;
+   margin-bottom: 40px;
+ }
+ .overlay {
+   font-size: 1.4em;
+ }
+ .overlay h2 {
+   font-size: 1.0em;
+ }
+ .photo-show, .clothing-show {
+   width: 100%;
+
+ }
+ .icons {
+   background: #58A199;
+   padding-top: 10px;
+   padding-bottom: 10px;
+   margin: 0px;
+ }
+ .photo-fa-icons {
+   color: white;
+   font-size: 1.5em;
+   margin: 2px 25px;
  }
 }
 
@@ -247,4 +274,5 @@ media queries for popup
     height: 50px;
     padding: 6px 0;
   }
+
 }
