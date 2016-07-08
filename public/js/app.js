@@ -68,8 +68,8 @@
     .state("outfitShow", {
       url: "/outfits/:id",
       templateUrl: "./js/outfits/show.html",
-      controller: "OutfitShowController",
-      controllerAs: "OutfitShowVM"
+      controller: "OutfitController",
+      controllerAs: "OutfitVM"
     });
   }
 

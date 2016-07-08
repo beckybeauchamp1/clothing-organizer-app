@@ -109,7 +109,7 @@ button.main-button::before {
 .popup.one {
   top: calc(49vh - 150px);
   left: calc(46vw - 200px);
-  width: 38%;
+  width: 42%;
   -webkit-transform: scale(0);
   transform: scale(0);
   opacity: 0;

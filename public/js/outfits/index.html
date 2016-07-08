@@ -2,7 +2,7 @@
   <div class="col-md-12 outfits-col">
     <!-- <h2>Total Outfits Created: {{outfits.length}}</h2> -->
     <div data-ng-repeat="outfit in outfits | limitTo: 10">
-      <a data-ng-sref="outfitShow({id: outfit.id})">{{outfit.description}}</a>
+      <a data-ui-sref="outfitShow({id: outfit.id})">{{outfit.description}}</a>
     </div>
   </div>
 </div>

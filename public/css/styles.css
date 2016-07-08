@@ -195,13 +195,6 @@ body {
   #loc {
     font-size: 20px;
   }
-  /*main container for outfits index.html */
-  .outfits-col {
-    background-color: rgba(255,255,255,0.9);
-    min-height: 600px;
-    font-size: 18px;
-    margin-top: 40px;
-  }
   /*index.html page for viewing all clothes*/
   .all-clothes-index-div{
     background-color: rgba(255,255,255,0.7);
