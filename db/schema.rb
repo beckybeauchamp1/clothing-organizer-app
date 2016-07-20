@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160612194509) do
+ActiveRecord::Schema.define(version: 20160710154652) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,21 +26,19 @@ ActiveRecord::Schema.define(version: 20160612194509) do
     t.string   "height"
     t.string   "color"
     t.integer  "cost"
-    t.string   "sleeves"
+    t.string   "sleeve_type"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.integer  "times_worn"
+    t.integer  "designer_id"
   end
 
   create_table "designers", force: :cascade do |t|
     t.string   "name"
     t.string   "website_url"
-    t.integer  "clothing_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
-
-  add_index "designers", ["clothing_id"], name: "index_designers_on_clothing_id", using: :btree
 
   create_table "outfits", force: :cascade do |t|
     t.string   "description"
@@ -56,6 +54,8 @@ ActiveRecord::Schema.define(version: 20160612194509) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
     t.string   "image"
+    t.integer  "x"
+    t.integer  "y"
   end
 
   add_index "photos", ["clothing_id"], name: "index_photos_on_clothing_id", using: :btree
@@ -87,7 +87,6 @@ ActiveRecord::Schema.define(version: 20160612194509) do
     t.datetime "updated_at", null: false
   end
 
-  add_foreign_key "designers", "clothings"
   add_foreign_key "photos", "clothings"
   add_foreign_key "seasons", "outfits"
   add_foreign_key "taggings", "clothings"

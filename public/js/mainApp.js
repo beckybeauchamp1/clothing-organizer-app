@@ -1,7 +1,7 @@
 (function(){
   angular
   .module("clothing-app")
-  .controller("MainController", function($scope, MainFactory){
+  .controller("MainController", function($scope, MainFactory, $stateParams){
 
     // $scope.photos = MainFactory.getPhotos().$promise.then(function(data){
     //   console.log(data)
@@ -63,6 +63,26 @@
     };
 
     window.onload = $scope.grabLocation();
+
+    $scope.photos = MainFactory.getPhotos().$promise.then(function(data){
+      return $scope.photos = data;
+    });
+
+    $scope.toDate = function(date) {
+      var d = new Date(date);
+      return d.toDateString();
+    }
+
+    $scope.photo = MainFactory.getOnePhoto({id: $stateParams.id});
+
+    $(".main-menu").on("click", changeBackgroundHome);
+
+    function changeBackgroundHome(){
+      $("body").css("background", "linear-gradient( rgba(255, 255, 255, 0.9),rgba(0, 0, 0, 0.4)),url('./images/plan2.jpg')");
+      $("body").css("background-size", "cover");
+      $("body").css("background-attachment", "fixed");
+    };
+
 
 
   });

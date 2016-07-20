@@ -1,6 +1,23 @@
+<div class="create-outfit-page">
 <div class="row">
-  <div class="col-md-12">
-    <h2><{{one.description}}</h2>
-    <!-- <p>{{one.created_at}}</p> -->
+  <div class="col-md-9 outfit-div">
+    <h4> {{one.outfit_top.title}} |  {{one.outfit_bottom.title}}</h4>
+    </div>
+    <div class="col-md-3 outfit-save-div">
+    {{photo_top.id}}
+    {{photo_bottom.id}}
+      <button data-ng-click="findCoord()" class="btn btn-primary">Save</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div data-ng-repeat="photo_top in one.outfit_top_photo" data-ng-init="addValues(photo_top)">
+        <img data-ng-draggable coordinates='photo_top'  id="top-photo" class="show-image outfit-photo img-responsive" img-responsive src="{{photo_top.image.url}}" />
+      </div>
+      <div data-ng-repeat="photo_bottom in one.outfit_bottom_photo" data-ng-init="addValues(photo_bottom)">
+
+        <img data-ng-draggable coordinates='photo_bottom' id="bottom-photo" class="show-image outfit-photo img-responsive" img-responsive src="{{photo_bottom.image.url}}" />
+      </div>
+    </div>
   </div>
 </div>

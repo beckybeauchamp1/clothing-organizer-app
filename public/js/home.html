@@ -1,5 +1,15 @@
 <div class="row">
   <div class="col-md-8">
+    <h3 class="home-h3-recent">Recently Added Clothing</h3>
+    <div class="image-div-home hovereffect" data-ng-repeat="photo in photos | orderBy: '-created_at' | limitTo: 3">
+      <img class="home-image img-responsive" src="{{photo.image.url}}">
+      <div class="overlay">
+        <h2>{{photo.description}}</h2>
+        _____________________________
+        <p>{{toDate(photo.created_at)}}</p>
+        <a data-ui-sref="photoShow({id: photo.id})">MORE INFO</a>
+      </div>
+    </div>
   </div>
   <div class="col-md-4 weather-info weather-forecast">
     <h2>Current Temp:</h2>

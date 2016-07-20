@@ -7,7 +7,7 @@
   ]);
 
   function MainFactoryFunction($resource){
-    return $resource("http://api.wunderground.com/api/d7a417fe5f6a1575/conditions/geolookup/q/", {},
+    return $resource("https://api.wunderground.com/api/d7a417fe5f6a1575/conditions/geolookup/q/", {},
     {
       getLocation: {
         method: "GET",
@@ -15,13 +15,20 @@
           lat: "@lat",
           long: "@long"
         },
-        url: "http://api.wunderground.com/api/d7a417fe5f6a1575/conditions/geolookup/q/:lat,:long.json"
+        url: "https://api.wunderground.com/api/d7a417fe5f6a1575/conditions/geolookup/q/:lat,:long.json"
       },
       getPhotos: {
         method: "GET",
         url: "http://localhost:3000/photos/:id",
         isArray: true
-      }
+      },
+      getOnePhoto: {
+        method: "GET",
+        params: {
+          id: '@id'
+        },
+        url: "http://localhost:3000/photos/:id"
+      },
     });
   }
 })();

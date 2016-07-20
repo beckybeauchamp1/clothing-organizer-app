@@ -1,0 +1,82 @@
+.new-clothing-article-div {
+  width: 85%;
+  margin: 0 auto;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  font-size: 1.0em;
+  margin-top: 10px;
+  text-align: center;
+  background-color: white;
+}
+.new-clothing-article-div input {
+  font-size: 1.5em;
+}
+.new-clothing-article-div input[type="number"] {
+  width: 30%;
+  margin: 0 auto;
+  height: 30px;
+  margin-bottom: 20px;
+}
+.designer-input {
+  width: 40%;
+  height: 30px;
+}
+.clothing-new-button {
+  display: block;
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+.required-as {
+  color: red;
+  font-size: 1.5em;
+}
+.required-input {
+  -webkit-transition: all 0.35s;
+  transition: all 1.0s;
+}
+.required-input:hover {
+  border: 2px solid red;
+}
+.error-message-header {
+  margin-top: 80px;
+  color: red;
+  font-weight: bold;
+}
+.form-group1{
+  width: 30%;
+  margin: 0 auto;
+}
+.form-group2 {
+  width: 100%;
+  background-color: red;
+  border: 2px solid black;
+  margin: 0 auto;
+}
+.form-group3 {
+  width: 100%;
+}
+.form-group4 {
+  margin-top: 20px;
+}
+.form-control-label {
+  display: inline;
+}
+.c-label-input {
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.detail-select {
+  height: 30px;
+  width: 10%;
+  margin-top: 10px;
+
+}
+.designer-label {
+  margin-top: 80px;
+  margin: 0 auto;
+  display: block;
+}

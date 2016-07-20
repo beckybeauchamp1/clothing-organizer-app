@@ -8,12 +8,30 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-resource.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+  (function(d){
+    var f = d.getElementsByTagName('SCRIPT')[0], p = d.createElement('SCRIPT');
+    p.type = 'text/javascript';
+    p.async = true;
+    p.src = '//assets.pinterest.com/js/pinit.js';
+    f.parentNode.insertBefore(p, f);
+  }(document));
+  </script>
+  <script src="./uploads/angular-file-upload/dist/angular-file-upload.js"></script> <!-- for no html5 browsers support -->
   <script src="./js/jQueryFunctions.js"></script>
   <script src="./js/app.js"></script>
-  <script src="./js/ng-simple-upload.js"></script>
-  <script src="./js/imageUploadsDirective.js"></script>
   <script src="./js/mainApp.js"></script>
   <script src="./js/mainFactory.js"></script>
+  <script src="./js/mainAppDirectives/uploads.js"></script>
+  <script src="./js/mainAppDirectives/sideBarDirective.js"></script>
+  <script src="./js/mainAppDirectives/loginDirective.js"></script>
+  <script src="./js/mainAppDirectives/loginDirective2.js"></script>
+  <script src="./js/mainAppDirectives/angular-dragdrop.min.js"></script>
+  <script src="./js/mainAppDirectives/dragDirective.js"></script>
+  <script src="./js/mainAppDirectives/imageUploadsDirective.js"></script>
+  <script src="./js/mainAppDirectives/keyCodeDirective.js"></script>
+  <script src="./js/mainAppDirectives/responsiveMenuDirective.js"></script>
+  <script src="./js/mainAppDirectives/popupDirective.js"></script>
   <script src="./js/clothing/clothing.js"></script>
   <script src="./js/clothing/clothingController.js"></script>
   <script src="./js/clothing/clothingFactory.js"></script>
@@ -23,46 +41,50 @@
   <script src="./js/outfits/outfitController.js"></script>
   <script src="./js/outfits/outfitFactory.js"></script>
   <script src="./js/outfits/outfitShowController.js"></script>
+  <script src="./js/outfits/formDirective.js"></script>
   <script src="./js/designers/designer.js"></script>
   <script src="./js/designers/designerController.js"></script>
+  <script src="./js/designers/designerShowController.js"></script>
   <script src="./js/designers/designerFactory.js"></script>
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
   <link href='https://fonts.googleapis.com/css?family=Lekton' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Megrim' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Yeseva+One' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Handlee' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=IM+Fell+Great+Primer' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="css/imagehover.min.css">
   <link rel="stylesheet" type="text/css" href="css/weather-icons.min.css">
   <link href="css/styles.css" rel="stylesheet" type="text/css">
+  <link href="css/popup.css" rel="stylesheet" type="text/css">
+  <link href="css/media-queries.css" rel="stylesheet" type="text/css">
+  <link href="css/outfits.css" rel="stylesheet" type="text/css">
+  <link href="css/new-clothing-form.css" rel="stylesheet" type="text/css">
+  <link href="css/designer.css" rel="stylesheet" type="text/css">
+  <meta name="viewport" content="width=device-width" />
 </head>
 <body>
-  <nav class="top-nav">
-    <ul class="top-nav-list">
-      <li><a href="/">Clothes</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="https://github.com/beckybeauchamp1/portfolio">Esty</a></li>
-      <li><a href="https://github.com/beckybeauchamp1">Contact</a></li>
-    </ul>
-  </nav>
-  <nav role="navigation">
-    <div id="menuToggle">
-      <input type="checkbox" />
-      <span></span>
-      <span></span>
-      <span></span>
+  <div class="row">
 
-      <ul id="menu">
-        <li><a class="main-menu" href="/">Home</a></li>
-        <li><a data-ui-sref="outfits">Outfits</a></li>
-        <li><a data-ui-sref="clothing">Clothes</a></li>
-        <li><a data-ui-sref="clothing">Budget</a></li>
-        <li><a class="main-menu" data-ui-sref="designersIndex">Designers</ax></li>
-        <li><a class="main-menu" href="#">Upload New</a></li>
-      </ul>
+    <div class="col-md-12">
+      <nav class="top-nav">
+        <ul class="top-nav-list">
+          <li><a href="/#/">Clothes</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="https://github.com/beckybeauchamp1/portfolio">Purchase</a></li>
+          <li><a href="https://github.com/beckybeauchamp1">Contact</a></li>
+        </ul>
+      </nav>
     </div>
-  </nav>
-  <h1><span class="first-header-letter">C</span>LOTHING <span class="first-header-letter">O</span>RGANIZER</h1>
-  <main data-ui-view></main>
 
-</body>
-</html>
+    <h1>CLOTHING ORGANIZER</h1>
+
+    <side-bar></side-bar>
+
+    <responsive-menu class="responsive-menu"></responsive-menu>
+
+
+    <main data-ui-view></main>
+
+  </body>
+  </html>

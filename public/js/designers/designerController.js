@@ -4,5 +4,4 @@ angular.module('designers').controller('DesignerController', function($scope, $s
 
   $scope.designers = DesignerFactory.query();
 
-
 });

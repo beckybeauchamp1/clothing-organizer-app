@@ -1,0 +1,30 @@
+<div class="row">
+  <div class="col-md-6 outfit-form-div">
+    <form class="outfit-form">
+      <p>Clothing Top</p>
+      <select name="selected" data-ng-model="selected" data-ng-change="grabclothingPhoto(selected)">
+        <option data-ng-repeat="clothing in tops | orderBy: 'title' " ng-value="{{clothing.id}}">{{clothing.title}}
+        </option>
+      </select>
+      <p>Clothing Bottom</p>
+      <select name="selected2" data-ng-model="selected2" data-ng-change="grabclothingPhoto2(selected2)">
+        <option data-ng-class="checkPhoto(clothing)" data-ng-repeat="clothing in bottoms | orderBy: 'title' " ng-value="{{clothing.id}}">{{clothing.title}}
+        </option>
+      </select>
+      <p>Description</p>
+      <input data-ng-model="description" class="outfit-description-input" type="text" placeholder="Enter Description..">
+    </form>
+    <button data-ng-click="createOutfit()" class="btn btn-primary outfit-save-form-button">Save</button>
+
+  </div>
+
+  <div class="col-md-3 div3">
+    <h4>Clothing Top Image</h4>
+    <img class="photo-show-outfit" data-ng-show="photo" src="{{photo.image.url}}">
+  </div>
+  <div class="col-md-3 div3">
+    <h4>Clothing Bottom Image</h4>
+    <img class="photo-show-outfit" data-ng-show="photo2" src="{{photo2.image.url}}">
+  </div>
+
+</div>

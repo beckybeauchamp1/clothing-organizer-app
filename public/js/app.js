@@ -3,12 +3,12 @@
 (function(){
   angular
   .module("clothing-app", [
-    'ngSimpleUpload',
     "ngResource",
     "ui.router",
     "outfits",
     "clothing",
-    "designers"
+    "designers",
+    'ngSimpleUpload'
   ])
   .config([
     "$stateProvider",
@@ -17,21 +17,39 @@
 
   function RouterFunction($stateProvider){
     $stateProvider
-    .state("main", {
-      url: '/home',
-      templateUrl: "./js/home.html",
-      controller: "homeController",
-      controllerAs: "homeVM"
-    })
     .state("initalLoad", {
       url: "",
       templateUrl: "./js/home.html",
       controller: "MainController",
       controllerAs: "MainVM"
     })
+    .state('photoShow', {
+      url: "/photos/:id",
+      templateUrl: "./js/photos/show.html",
+      controller: "MainController",
+      controllerAs: "MainVM"
+    })
     .state("clothing", {
       url: "/clothes",
       templateUrl: "./js/clothing/index.html",
+      controller: "ClothingController",
+      controllerAs: "ClothingVM"
+    })
+    .state("todaysClothing", {
+      url: "/clothes/today",
+      templateUrl: "./js/clothing/timesWorn.html",
+      controller: "ClothingController",
+      controllerAs: "ClothingVM"
+    })
+    .state("clothingNew", {
+      url: "/clothes/new",
+      templateUrl: "./js/clothing/new.html",
+      controller: "ClothingController",
+      controllerAs: "ClothingVM"
+    })
+    .state("clothingEdit", {
+      url: '/clothes/:id/edit',
+      templateUrl: "./js/clothing/edit.html",
       controller: "ClothingController",
       controllerAs: "ClothingVM"
     })
@@ -46,6 +64,12 @@
       templateUrl: "./js/designers/index.html",
       controller: "DesignerController",
       controllerAs: "DesignerVM"
+    })
+    .state('designerShow', {
+      url: '/designers/:id',
+      templateUrl: "./js/designers/show.html",
+      controller: "DesignerShowC",
+      controllerAs: "DesignerShowVM"
     })
     .state('dresses', {
       url: "/dresses",
@@ -62,9 +86,9 @@
     .state("outfitShow", {
       url: "/outfits/:id",
       templateUrl: "./js/outfits/show.html",
-      controller: "OutfitShowController",
-      controllerAs: "OutfitShowVM"
-    });
+      controller: "OutfitController",
+      controllerAs: "OutfitVM"
+    })
   }
 
 }());

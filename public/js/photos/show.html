@@ -1,0 +1,21 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="photo-show">
+      <div class="icons">
+        <a data-pin-config="beside" href="https://www.pinterest.com/pin/create/button/"><i class="photo-fa-icons fa fa-pinterest-square" aria-hidden="true"></i></a>
+          <i class="photo-fa-icons fa fa-amazon" aria-hidden="true"></i>
+          <i class="photo-fa-icons fa fa-instagram" aria-hidden="true"></i>
+          <i class="photo-fa-icons fa fa-cc-paypal" aria-hidden="true"></i>
+          <i class="pull-right photo-fa-icons fa fa-pencil-square-o" aria-hidden="true"></i>
+        </div>
+
+        <img class="show-image img-responsive" src="{{photo.image.url}}">
+        <h2>{{photo.description}}</h2>
+        _____________________________
+        <p>{{toDate(photo.created_at)}}</p>
+
+        <button class="btn btn-danger photo-remove">Remove</button>
+
+      </div>
+    </div>
+  </div>

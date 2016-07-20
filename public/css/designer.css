@@ -1,0 +1,35 @@
+.designer-div {
+  background-color: rgba(255,255,255,0.6);
+  text-align: center;
+  margin-top: 30px;
+  font-size: 1.4em;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+.designer-names {
+  display: inline-table;
+  width: 40%;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.designer-show {
+  width: 50%;
+  margin: 0 auto;
+  background-color: rgba(255,255,255,0.8);
+}
+.designer-icons {
+  min-height: 30px;
+}
+.designer-url-input {
+  width: 40%;
+  height: 30px;
+  display: inline;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+.designer-url-button {
+  width: 10%;
+  display: inline;
+  margin: 0;
+  height: 30px;
+}
