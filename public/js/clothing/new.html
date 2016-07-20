@@ -1,0 +1,39 @@
+<h2>Recent Purchase!</h2>
+<h4 class="error-message-header" data-ng-show="showErrorMessage">{{error}}</h4>
+<div class="form-group new-clothing-article-div">
+  <div class="form-group1">
+    <label class="form-control-label">Title <strong class="required-as">*</strong></label>
+    <input data-ng-model="clothingTitle" type="text" class="required-input form-control">
+    <label class="form-control-label">Description <strong class="required-as">*</strong></label>
+    <input data-ng-model="clothingDescription" type="text" class="required-input form-control">
+  </div>
+  <div class="form-group3">
+    <label class="form-control-label color-label">Color</label>
+    <input data-ng-mouseleave="changeColor(color, $event)" data-ng-model="color" type="text" class="form-control c-label-input">
+    <label class="form-control-label detail-select">Cost</label>
+    <input data-ng-model="cost" type="number" class="form-control c-label-input">
+    <label class="form-control-label">Type <strong class="required-as">*</strong></label>
+    <select class="required-input detail-select" name="selected" data-ng-model="type">
+      <option data-ng-repeat="type in types">{{type}}</option>
+    </select>
+    <label class="form-control-label clothing-details">Sleeve Type</label>
+    <select class="detail-select" name="selected" data-ng-model="sleeve">
+      <option data-ng-repeat="sleeve in sleeve_types">{{sleeve}}</option>
+    </select>
+    <label class="form-control-label clothing-details">Length</label>
+    <select class="detail-select" name="selected" data-ng-model="length">
+      <option data-ng-repeat="length in lengths">{{length}}</option>
+    </select>
+    <label class="form-control-label clothing-details">Size</label>
+    <select class="detail-select" name="selected" data-ng-model="size">
+      <option data-ng-repeat="size in sizes">{{size}}</option>
+    </select>
+  </div>
+  <div class="form-group4">
+    <label class="form-control-label designer-label">Select Designer from Dropdown</label>
+    <select class="designer-input" name="selected" data-ng-model="designer">
+      <option data-ng-repeat="designer in designers | filter:designerSearch" data-ng-value="designer.id">{{designer.name}}</option>
+    </select>
+  </div>
+  <button data-ng-click="saveClothingArticle()" class="clothing-new-button btn btn-primary">Save</button>
+</div>

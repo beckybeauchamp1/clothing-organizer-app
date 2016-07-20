@@ -19,10 +19,15 @@ class ClothingController < ApplicationController
     render :json => @clothing.to_json(:include => [:photos])
   end
 
+  def create
+    @clothing = Clothing.create(clothing_params)
+    render :json => @clothing.to_json(:include => [:photos])
+  end
+
   private
 
   def clothing_params
-    params.require(:clothing).permit(:description, :title, :type, :size, :length, :material, :height, :color, :cost, :sleeve_type, :times_worn)
+    params.require(:clothing).permit(:description, :title, :type, :size, :length, :material, :height, :color, :cost, :sleeve_type, :times_worn, :designer_id)
   end
 
 

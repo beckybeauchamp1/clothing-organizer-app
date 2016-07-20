@@ -97,6 +97,8 @@ designers = ["6 SHORE ROAD",
 "Velvet by Graham & Spencer",
 "Wildfox Couture"]
 
+
+
 clothing_tops= []
 clothing_bottoms = []
 
@@ -105,8 +107,16 @@ lengths = ["short", "mid", "long"]
 types = ["Shirt", "Dress", "Pant", "Short", "Skirt"]
 sleeve_types = ["long", "mid", "short", "strapless", "spaghetti"]
 materials = ["cotton", "wool", "silk", "denim", "leather", "fur", "spandex", "polyester", "nylon", "flannel"]
+designer_ids =[]
 
-100.times do |clothing|
+designers.each do |person|
+  new = Designer.create!(name: person)
+  designer_ids << new.id
+end
+
+puts designer_ids
+
+130.times do |clothing|
   clothing = Clothing.create!(
   title: Faker::Commerce.product_name,
   cost: Faker::Commerce.price,
@@ -117,7 +127,8 @@ materials = ["cotton", "wool", "silk", "denim", "leather", "fur", "spandex", "po
   material: materials.shuffle.pop,
   color: Faker::Color.color_name,
   type: types.shuffle.pop,
-  times_worn: (1..20).to_a.shuffle.pop
+  times_worn: (1..20).to_a.shuffle.pop,
+  designer_id: designer_ids.shuffle.pop
   )
   if clothing.type == "Shirt" || clothing.type == "Dress"
     clothing_tops << clothing
@@ -142,8 +153,4 @@ end
   clothing_top_id: clothing_tops.shuffle.pop.id,
   clothing_bottom_id: clothing_bottoms.shuffle.pop.id
   )
-end
-
-designers.each do |person|
-  Designer.create!(name: person)
 end

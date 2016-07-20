@@ -1,0 +1,19 @@
+<div class="row">
+
+  <div class="col-md-12">
+    <div class="designer-show">
+      <div class="icons designer-icons">
+      </div>
+      <h2>{{designer.name}}</h2>
+      <p data-ng-hide="{{designer.website_url}}">Website Url: {{designer.website_url}}
+        <i data-ng-click="changeInputView()"class="fa fa-pencil" aria-hidden="true"></i>
+      </p>
+      <p data-ng-hide="showInput"><input type ="text" placeholder="Enter website url.." class="form-control designer-url-input" data-ng-model="website_url"><button data-ng-click="saveUrl()" class="btn btn-default designer-url-button">Enter</button></p>
+      <div data-ng-repeat="clothing in designer.clothing">
+        <p>Current Owned Pieces: <a data-ui-sref="clothingShow({id: clothing.id})">{{clothing.title}}</a></p>
+      </div>
+
+    </div>
+  </div>
+
+</div>

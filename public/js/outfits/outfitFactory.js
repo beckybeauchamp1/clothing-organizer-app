@@ -19,6 +19,15 @@
         },
         url: "http://localhost:3000/outfits/:id"
       },
+      newOutfit: {
+        method: "POST",
+        params: {
+          description: '@description',
+          clothing_top_id: '@clothing_top_id',
+          clothing_bottom_id: '@clothing_bottom_id'
+        },
+        url: "http://localhost:3000/outfits"
+      },
       updatePhoto: {
         method: "PUT",
         params: {

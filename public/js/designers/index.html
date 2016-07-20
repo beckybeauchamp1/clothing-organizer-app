@@ -1,8 +1,14 @@
-<h2>Designers</h2>
+<h3>Designers</h3>
+<div class="input-group">
+  <input data-ng-model="searchValue" type="text" class="form-control" placeholder="Search Designers...">
+  <span class="input-group-btn">
+    <button class="btn btn-default search-button" type="button">Submit</button>
+  </span>
+</div>
 <div class="row">
-  <div class="col-md-12">
-    <div data-ng-repeat="designer in designers">
-      {{designer.name}}
+  <div class="designer-div">
+    <div class="designer-names" data-ng-repeat="designer in designers | filter:searchValue ">
+      <a data-ui-sref="designerShow({id: designer.id})">{{designer.name}}</a>
     </div>
   </div>
 </div>

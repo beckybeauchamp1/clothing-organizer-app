@@ -33,6 +33,21 @@
           times_worn: '@times_worn'
         },
         url: "http://localhost:3000/clothing/:id"
+      },
+      newClothing: {
+        method: "POST",
+        params: {
+          title: '@title',
+          description: '@description',
+          cost: '@cost',
+          length: '@length',
+          size: '@size',
+          sleeve_type: '@sleeve',
+          type: '@type',
+          color: '@color',
+          designer_id: '@designer_id'
+        },
+        url: "http://localhost:3000/clothing"
       }
     });
   }

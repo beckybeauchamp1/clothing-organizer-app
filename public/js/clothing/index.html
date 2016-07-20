@@ -16,7 +16,7 @@
       <h3>$ {{c.cost}}</h3>
     </div>
     <div class="col-md-6">
-      <h2><button data-ng-hide="checkForImages(c.photos)" class="btn btn-primary image-button"><a href="clothing/{{c.id}}/photos/new" data-ng-hide="checkForImages(c.photos)">Add Image</a></button></h2>
+      <h2><a href="clothing/{{c.id}}/photos/new" class="btn btn-primary image-button" data-ng-hide="checkForImages(c.photos)">Add Image</a></h2>
       <div data-ng-repeat="img in c.photos">
         <div class="image-photo hovereffect">
           <img class="img-responsive" data-ng-show="img.image" src="{{img.image.url}}">

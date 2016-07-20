@@ -3,12 +3,12 @@
 (function(){
   angular
   .module("clothing-app", [
-    'ngSimpleUpload',
     "ngResource",
     "ui.router",
     "outfits",
     "clothing",
-    "designers"
+    "designers",
+    'ngSimpleUpload'
   ])
   .config([
     "$stateProvider",
@@ -41,6 +41,18 @@
       controller: "ClothingController",
       controllerAs: "ClothingVM"
     })
+    .state("clothingNew", {
+      url: "/clothes/new",
+      templateUrl: "./js/clothing/new.html",
+      controller: "ClothingController",
+      controllerAs: "ClothingVM"
+    })
+    .state("clothingEdit", {
+      url: '/clothes/:id/edit',
+      templateUrl: "./js/clothing/edit.html",
+      controller: "ClothingController",
+      controllerAs: "ClothingVM"
+    })
     .state("clothingShow", {
       url: "/clothes/:id",
       templateUrl: "./js/clothing/show.html",
@@ -52,6 +64,12 @@
       templateUrl: "./js/designers/index.html",
       controller: "DesignerController",
       controllerAs: "DesignerVM"
+    })
+    .state('designerShow', {
+      url: '/designers/:id',
+      templateUrl: "./js/designers/show.html",
+      controller: "DesignerShowC",
+      controllerAs: "DesignerShowVM"
     })
     .state('dresses', {
       url: "/dresses",
@@ -70,7 +88,7 @@
       templateUrl: "./js/outfits/show.html",
       controller: "OutfitController",
       controllerAs: "OutfitVM"
-    });
+    })
   }
 
 }());

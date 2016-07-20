@@ -4,6 +4,7 @@
   angular
   .module('clothing', [
     "ngResource",
-    "ui.router"
+    "ui.router",
+    "angularFileUpload"
   ]);
 })();
